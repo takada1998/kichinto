@@ -1,0 +1,14 @@
+.l-header {
+    height: 60px;
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        height: 60px;
+    }
+
+    &__left {
+        display: flex;
+        padding: 0px 0px 0px 90px;
+    }
+}
