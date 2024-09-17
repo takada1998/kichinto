@@ -1,0 +1,38 @@
+.l-footer {
+    &__head {
+        background-color: #f7f8f8;
+        padding: 80px 0px;
+    }
+
+    &__banner {
+        display: flex;
+        justify-content: center;
+
+    }
+
+    &__body {
+        height: 466px;
+
+        &__wrap {
+            display: flex;
+        }
+    }
+
+    img {
+        padding: 0px 20.75px;
+        height: 209px;
+        width: 373px;
+    }
+
+    &__info {
+        display: flex;
+
+    }
+
+    &__sns__ul {
+        img {
+            width: 23px;
+            height: 23px;
+        }
+    }
+}
