@@ -1,0 +1,32 @@
+.l-headerNav {
+
+    &__menu {
+        display: flex;
+    }
+
+    &__listItem {
+        padding: 0px 13px;
+    }
+
+    &__subnavItem {
+        display: flex;
+        width: 40px;
+        height: 60px;
+
+
+        img {
+            width: 22px;
+            height: 22px;
+        }
+    }
+
+    &__subnavInner ul {
+        align-items: center;
+
+        img {
+            margin-left: 20px;
+        }
+    }
+
+
+}
