@@ -3,12 +3,24 @@
 
     &__inner {
         display: flex;
-        align-items: center;
-        height: 60px;
+    }
+
+    &__right {
+        padding: 0px 90px 0px 0px;
+
     }
 
     &__left {
         display: flex;
         padding: 0px 0px 0px 90px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__logoText {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        color: #555555;
     }
 }
