@@ -18,6 +18,9 @@
 
         &__wrap {
             display: flex;
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
         }
     }
 
@@ -58,10 +61,14 @@
 
     &__newsletter__wrap {
         padding: 0px 0px 60px;
+
+
     }
 
     &__body__left {
         padding: 0px 0px 0px 60px;
+
+
     }
 
     &__newsletter__text {
@@ -80,4 +87,76 @@
         display: flex;
 
     }
+
+    &__nav__li {
+        padding: 12px 0px;
+    }
+
+    &__title {
+        margin: 0px 0px 20px;
+    }
+
+    &__newsletter__text {
+        margin: 0px 0px 40px;
+
+    }
+
+    &__newsletter__button {
+        background-color: #e6e6e6;
+        width: 339px;
+        height: 50px;
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        line-height: 50px;
+    }
+
+
+    &__newsletter {
+        position: relative;
+    }
+
+    &__foot {
+        padding: 20px 0px;
+
+    }
+
+    &__foot__wrap {
+        margin: 0px 81px;
+    }
+
+    &__modalbtn {
+        padding: 10px;
+    }
+
+    &__subnav__li {
+        padding: 10px;
+    }
+
+    &__foot__right {
+        margin: 0px -10px 0px auto;
+        padding: 10px;
+
+    }
+}
+
+.l-footer__newsletter::after {
+    content: "";
+    position: absolute;
+    left: -60px;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background-color: #e6e6e6;
+    height: 242px;
+}
+
+.l-footer__subnav__li:after {
+    content: "";
+    background-color: #e6e6e6;
+    width: 1px;
+    height: 1rem;
+    position: absolute;
+    top: 50%;
+    right: 0;
 }
