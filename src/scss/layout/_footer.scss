@@ -147,16 +147,17 @@
     top: 0;
     bottom: 0;
     width: 1px;
-    background-color: #e6e6e6;
     height: 242px;
+    background-color: #e6e6e6;
+
 }
 
-.l-footer__subnav__li:after {
+.l-footer__subnav__link span::before {
     content: "";
-    background-color: #e6e6e6;
-    width: 1px;
-    height: 1rem;
-    position: absolute;
-    top: 50%;
-    right: 0;
+    display: inline-block;
+    margin-right: 15px;
+    border-right: 2px solid #e6e6e6;
+    height: 16px;
+    vertical-align: middle;
+    /* テキストの中央に縦線を揃える */
 }

@@ -1,5 +1,167 @@
 .l-main {
-    width: auto;
-    height: 1200px;
-    background-color: #c0e2f0;
+    &__top {
+        width: auto;
+        height: 1200px;
+        background-color: #c0e2f0;
+    }
+
+
+
+    &__activebottle {
+        height: 981px;
+        display: flex;
+    }
+
+
+    &__activebottle__left {
+        text-align: left;
+        padding: 100px 100px 100px 0px;
+
+        img {
+            width: 988px;
+            height: 741px;
+            object-fit: cover;
+        }
+    }
+
+    &__activebottle__right {
+        padding: 100px 0px 100px 0px;
+    }
+
+    &__activebottle__rightTop {
+        padding: 109px 0px 60px;
+
+        h2 {
+            color: #555555;
+            font-size: 25px;
+            padding: 10px 0px;
+        }
+
+        a {
+            color: #555555;
+            font-size: 12px;
+
+        }
+    }
+
+    &__activebottle__rightBottom {
+        img {
+            width: 603px;
+            height: 603px;
+            object-fit: cover;
+        }
+    }
+
+
+
+    &__products {
+        height: 781px;
+        display: flex;
+        padding: 108px 0px 0px;
+        margin: 0px 162px;
+    }
+
+    &__products__leftTop {
+        h2 {
+            color: #555555;
+            font-size: 14px;
+            padding: 50px 0px;
+        }
+
+        a {
+            color: #555555;
+            font-size: 11px;
+
+        }
+    }
+
+    &__products__rigth {
+        display: flex;
+        padding: 0px 0px 0px 300px;
+        text-align: right;
+
+        img {
+            width: 570px;
+            height: 670px;
+            object-fit: cover;
+            padding-right: 15px
+        }
+    }
+
+    &__buttonContainer {
+        display: flex;
+        border: 1px solid #d3d3d3;
+    }
+
+    &__nav-button {
+        background-color: #fff;
+        border: none;
+        padding: 15px 25px;
+        cursor: pointer;
+        outline: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+        color: #888;
+        transition: background-color 0.3s, color 0.3s;
+        border-right: 1px solid #d3d3d3;
+    }
+
+    &__nav-button:last-child {
+        border-right: none;
+    }
+
+    &__nav-button:hover {
+        background-color: #f0f0f0;
+        color: #555;
+    }
+
+    &__left-button span::before {
+        transform: rotate(-135deg);
+        /* 矢印の向きを調整 */
+    }
+
+    &__right-button span::before {
+        transform: rotate(-135deg);
+        /* 矢印の向きを調整 */
+    }
+
+
+
+    &__categories {
+        padding: 108px 0px;
+        margin: 0px 162px;
+    }
+
+    &__categoriesTop {
+        display: flex;
+    }
+
+    &__categories__bottom {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__categoriesTop {
+        h2 {
+            color: #555555;
+            font-size: 14px;
+            margin: 0px 0px 36px;
+            padding: 0px 0px 17px;
+        }
+
+        a {
+            color: #555555;
+            font-size: 11px;
+            margin: 0 0 0 auto;
+
+        }
+    }
+
+    &__categories__bottomImage {
+        padding: 30px;
+        width: calc((100% - 30px * 2) / 3);
+        background-color: #fff;
+    }
 }
