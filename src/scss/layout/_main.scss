@@ -196,5 +196,20 @@
     &__MARKit__right {
         background-color: #f7f8f8;
         width: 100%;
+        padding: 146px 73px 87px;
     }
+
+    &__MARKit__product__item {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__MARKit__product__item img {
+        width: 213px;
+        height: 213px;
+        padding: 5px;
+        object-fit: contain;
+
+    }
+
 }
