@@ -212,4 +212,23 @@
 
     }
 
+
+    &__JOURNAL {
+        height: 557px;
+    }
+
+    &__movieinner {
+        text-align: center;
+        padding: 108px 0px;
+
+        img {
+            width: 1280px;
+            height: 512px;
+
+        }
+    }
+
+    &__news {
+        height: 229px;
+    }
 }
