@@ -3,6 +3,11 @@
         width: auto;
         height: 1200px;
         background-color: #c0e2f0;
+
+        img {
+            object-fit: cover;
+            height: 1200px;
+        }
     }
 
 
@@ -61,7 +66,12 @@
         margin: 0px 162px;
     }
 
+    &__products__left {
+        height: 673px;
+    }
+
     &__products__leftTop {
+
         h2 {
             color: #555555;
             font-size: 14px;
@@ -128,7 +138,6 @@
     }
 
 
-
     &__categories {
         padding: 108px 0px;
         margin: 0px 162px;
@@ -142,7 +151,6 @@
         h2 {
             color: #555555;
             font-size: 14px;
-            margin: 0px 0px 36px;
             padding: 0px 0px 17px;
         }
 
@@ -199,6 +207,10 @@
         padding: 146px 73px 87px;
     }
 
+    &__MARKit__product {
+        padding: 180px 90px 108px;
+    }
+
     &__MARKit__product__item {
         display: flex;
         justify-content: center;
@@ -212,10 +224,56 @@
 
     }
 
+    &__MARKit__productsView {
+        margin: 52px 0px 0px;
+        text-align: center;
+    }
+
+
+
+
+
 
     &__JOURNAL {
         height: 557px;
     }
+
+    &__JOURNALWprp {
+        margin: 0px 260px;
+        padding: 108px 0px 0px;
+    }
+
+    &__JOURNALTop {
+        display: flex;
+
+        h2 {
+            color: #555555;
+            font-size: 14px;
+            //margin: 0px 0px 36px;
+            padding: 0px 0px 17px;
+        }
+
+        a {
+            color: #555555;
+            font-size: 11px;
+            margin: 0 0 0 auto;
+
+        }
+    }
+
+
+    &__more-collection {
+        display: flex;
+
+        ul img {
+            width: 413px;
+            height: 275px;
+            margin-right: 20px;
+            object-fit: cover;
+        }
+    }
+
+
 
     &__movieinner {
         text-align: center;
@@ -224,11 +282,77 @@
         img {
             width: 1280px;
             height: 512px;
+            object-fit: cover;
+        }
+    }
+
+
+
+
+
+    &__newsWprp {
+        width: 1280px;
+        height: 229px;
+        padding: 0px 0px 108px;
+        margin: 0 auto;
+    }
+
+    &__newsTop {
+        display: flex;
+        padding: 0px 0px 17px;
+        //margin: 0 auto;
+
+
+        h2 {
+            color: #555555;
+            font-size: 14px;
+            //margin: 0px 0px 36px;
+            //padding: 0px 0px 17px;
+        }
+
+        a {
+            color: #555555;
+            font-size: 11px;
+            margin: 0 0 0 auto;
 
         }
     }
 
-    &__news {
-        height: 229px;
+    &__newsinnert {
+        display: flex;
+        width: 1280px;
+        margin: 0 auto;
+
+        a {
+            color: #555555;
+            font-size: 12px;
+            margin: 0 0 0 auto;
+
+        }
+    }
+
+    &__hr1 {
+        background-color: #e6e6e6;
+        margin: 0px 0px 36px;
+    }
+
+    &__hr2 {
+        background-color: #e6e6e6;
+        margin: 0px 0px 52px;
+    }
+
+    &__hr3 {
+        background-color: #e6e6e6;
+        margin: 0 0 0 auto;
+    }
+
+    &__hr4 {
+        background-color: #e6e6e6;
+        margin: 0 0 0 auto;
+    }
+
+    &__viewmoer {
+        text-decoration: underline;
+        text-underline-offset: 0.7em;
     }
 }
