@@ -1,0 +1,18 @@
+.c-navItem {
+    font-size: 13px;
+    color: #555555;
+    margin-right: 38px;
+
+
+    &__listitem {
+        display: flex;
+        width: 40px;
+        height: 60px;
+
+        img {
+            width: 40px;
+            height: 40px;
+        }
+
+    }
+}
