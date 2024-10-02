@@ -1,0 +1,25 @@
+.p-activebottle {
+    &__rightTop {
+        padding: 109px 0px 60px;
+
+        h2 {
+            color: #555555;
+            font-size: 25px;
+            padding: 10px 0px;
+        }
+
+        a {
+            color: #555555;
+            font-size: 12px;
+
+        }
+    }
+
+    &__rightBottom {
+        img {
+            width: 563px;
+            height: 563px;
+            object-fit: cover;
+        }
+    }
+}

@@ -13,13 +13,10 @@
 
     &__body {
         height: 466px;
-        padding: 80px 0px 160px;
+        padding: 80px 60px 160px;
 
         &__wrap {
             display: flex;
-            width: 90%;
-            margin-left: auto;
-            margin-right: auto;
         }
     }
 
@@ -41,7 +38,6 @@
     }
 
     &__info__body {
-        padding: 0px 60px;
         width: 610px;
         height: 177px;
 
@@ -56,22 +52,6 @@
 
     &__title {
         color: #555555;
-    }
-
-    &__newsletter__wrap {
-        padding: 0px 0px 60px;
-
-
-    }
-
-    &__body__left {
-        padding: 0px 0px 0px 60px;
-
-
-    }
-
-    &__newsletter__text {
-        margin: 0px 0px 40px;
     }
 
     &__foot__left {
@@ -102,14 +82,12 @@
 
     &__newsletter__button {
         background-color: #e6e6e6;
-        width: 339px;
         height: 50px;
         display: block;
         text-align: center;
         text-decoration: none;
         line-height: 50px;
     }
-
 
     &__newsletter {
         position: relative;

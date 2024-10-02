@@ -1,0 +1,17 @@
+.p-collection {
+    display: flex;
+    /*  左右均等に配置※すべてのマージン幅が同じ  */
+    justify-content: space-evenly;
+
+    li img {
+        width: 413px;
+        height: 275px;
+        margin-right: 20px;
+        object-fit: cover;
+    }
+
+    p {
+        color: #555555;
+        font-size: 14px;
+    }
+}

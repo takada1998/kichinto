@@ -1,9 +1,15 @@
 .l-header {
     height: 60px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 1; //位置定義最善//
+    background-color: #ffffff;
 
     &__inner {
         display: flex;
-        height: 60px;
+        //height: 60px;
     }
 
     &__left {
@@ -16,5 +22,11 @@
         font-weight: bold;
         margin: 20px 0px 20 0px;
         color: #555555;
+    }
+
+    &__right {
+        margin: 0 0 0 auto;
+        padding: 0px 84px 0px 0px;
+
     }
 }

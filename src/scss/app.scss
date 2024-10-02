@@ -24,18 +24,22 @@
 // Component
 // -----------------------------------------------------------------*/
 
+@use 'object/component/_btn';
 @use 'object/component/_link';
 @use 'object/component/_news';
 @use 'object/component/_navItem';
 @use 'object/component/_subnavItem';
+@use 'object/component/_images';
 
 /*// -----------------------------------------------------------------
 // Project
 // -----------------------------------------------------------------*/
-
-@use 'object/project/_home';
 @use 'object/project/_nav';
 @use 'object/project/_subnav';
+@use 'object/project/_activebottle';
+@use 'object/project/_products';
+@use 'object/project/_categories';
+@use 'object/project/_collection';
 
 /*// -----------------------------------------------------------------
 // Utility

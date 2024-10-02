@@ -1,0 +1,24 @@
+.p-categories {
+    &__top {
+        display: flex;
+
+
+        h2 {
+            color: #555555;
+            font-size: 14px;
+            padding: 0px 0px 17px;
+        }
+
+        a {
+            color: #555555;
+            font-size: 11px;
+            margin: 0 0 0 auto;
+        }
+    }
+
+    &__bottom ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}

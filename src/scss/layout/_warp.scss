@@ -1,3 +1,10 @@
 .l-wrap {
     width: 100%;
+    justify-content: center;
+
+    ::before {
+        container: "";
+        display: block;
+        padding-top: 100%;
+    }
 }

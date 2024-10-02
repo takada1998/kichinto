@@ -1,0 +1,16 @@
+.c-images {
+
+    li:nth-child(-n+2)img {
+        width: 610px;
+        height: 480px;
+        margin: 10px;
+        object-fit: cover;
+    }
+
+    li:nth-child(n+3)img {
+        width: 400px;
+        height: 470px;
+        margin: 10px;
+        object-fit: cover;
+    }
+}
