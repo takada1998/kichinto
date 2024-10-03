@@ -1,0 +1,17 @@
+.p-info {
+    &__head {
+        width: 520px;
+        height: 177px;
+    }
+
+    &__wrap {
+        display: flex;
+
+    }
+
+    &__body {
+        width: 520px;
+        padding: 0px 100px;
+    }
+
+}

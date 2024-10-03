@@ -1,4 +1,5 @@
 .l-main {
+    justify-content: space-between;
 
     &__top {
         //width: auto;
@@ -112,18 +113,27 @@
     &__MARKit__product__item {
         display: flex;
         justify-content: center;
+        text-align: center;
     }
 
-    &__MARKit__product__item img {
-        width: 213px;
-        height: 213px;
-        padding: 5px;
-        object-fit: contain;
+    &__MARKit__product__item {
+        padding-top: 100px;
 
+        img {
+            width: 213px;
+            height: 213px;
+            padding: 10px 10px 20px;
+            object-fit: contain;
+        }
+
+        a {
+            color: #555555;
+            font-size: 11px;
+        }
     }
 
     &__MARKit__productsView {
-        margin: 52px 0px 0px;
+        margin: 92px 0px 0px;
         text-align: center;
     }
 
@@ -220,7 +230,7 @@
 
     &__hr2 {
         background-color: #e6e6e6;
-        margin: 10px 0px 52px;
+        margin: 20px 0px 52px;
     }
 
     &__hr3 {
@@ -236,5 +246,6 @@
     &__viewmoer {
         text-decoration: underline;
         text-underline-offset: 0.7em;
+        color: #555555;
     }
 }

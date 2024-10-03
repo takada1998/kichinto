@@ -1,0 +1,37 @@
+.c-textBox {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+
+    /*両端揃えで配置*/
+    &__topwarp {
+        text-align: center;
+    }
+
+    &__botoomwarp {
+        text-align: center;
+        margin: 25px 0px 9.6px;
+        font-size: 12px;
+    }
+
+    &__top {
+        display: flex;
+        justify-content: center;
+
+    }
+
+    &__first {
+        font-size: 50px;
+        line-height: 1;
+    }
+
+    &__second {
+        font-size: 40px;
+        line-height: 1;
+    }
+
+    &__botoom {
+        font-size: 12px;
+        color: #555555;
+    }
+}

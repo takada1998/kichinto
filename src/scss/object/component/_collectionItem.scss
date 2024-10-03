@@ -1,0 +1,19 @@
+.c-collectionItem {
+    display: flex;
+
+    &__bottomImage {
+
+        img {
+            width: 413px;
+            height: 275px;
+            margin-right: 20px;
+            object-fit: cover;
+        }
+
+        p {
+            color: #555555;
+            font-size: 14px;
+            margin: 10px 0px;
+        }
+    }
+}

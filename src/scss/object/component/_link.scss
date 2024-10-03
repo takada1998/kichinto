@@ -1,8 +1,17 @@
 .c-link {
 
-
     &__text {
         font-size: 13px;
         color: #555555;
     }
+
+    &__footerBanner {
+        display: flex;
+        justify-content: center;
+
+        a {
+            padding: 18.5px;
+        }
+    }
+
 }

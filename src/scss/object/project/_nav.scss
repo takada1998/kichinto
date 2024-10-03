@@ -1,9 +1,14 @@
 .p-nav {
-
     &__list {
         margin: 10px 13px 10px 40px;
         display: flex;
         text-align: center;
     }
 
+    &__footer {
+
+        &__text {
+            padding: 10px 0px;
+        }
+    }
 }
