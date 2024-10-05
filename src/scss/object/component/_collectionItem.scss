@@ -1,6 +1,10 @@
 .c-collectionItem {
     display: flex;
 
+    @media (max-width: 600px) {
+        flex-wrap: wrap;
+    }
+
     &__bottomImage {
 
         img {

@@ -1,4 +1,9 @@
 .p-nav {
+    @media (max-width: 1000px) {
+        display: none;
+    }
+
+
     &__list {
         margin: 10px 13px 10px 40px;
         display: flex;

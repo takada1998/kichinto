@@ -1,4 +1,6 @@
 .p-activebottle {
+    width: 100%;
+
     &__rightTop {
         padding: 109px 0px 60px;
 
@@ -16,10 +18,24 @@
     }
 
     &__rightBottom {
+        width: 563px;
+        height: 563px;
+
         img {
-            width: 563px;
-            height: 563px;
             object-fit: cover;
         }
+    }
+
+
+    &__left {
+        position: relative;
+
+        img {
+            animation: image-switch-animation 25s infinite;
+        }
+    }
+
+    &__rigth {
+        position: relative;
     }
 }

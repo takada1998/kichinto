@@ -7,11 +7,16 @@
     &__wrap {
         display: flex;
 
+        @media (max-width: 1000px) {
+            display: block;
+        }
     }
 
     &__body {
         width: 520px;
         padding: 0px 100px;
+        justify-content: space-between;
+
     }
 
 }

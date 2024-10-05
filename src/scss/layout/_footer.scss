@@ -2,7 +2,8 @@
     &__head {
         background-color: #f7f8f8;
         padding: 80px 60px;
-
+        justify-content: space-between;
+        align-items: center;
     }
 
     &__body {
@@ -11,6 +12,10 @@
 
         &__wrap {
             display: flex;
+
+            @media (max-width: 1000px) {
+                display: block;
+            }
         }
     }
 
@@ -42,7 +47,14 @@
     &__title {
         margin: 0px 0px 20px;
         color: #989898;
+
+
+        @media(max-width: 1000px) {
+            display: none;
+        }
     }
+
+
 
     &__newsletter__text {
         margin: 0px 0px 40px;
@@ -69,6 +81,10 @@
 
     &__foot__wrap {
         margin: 0px 81px;
+
+        @media (max-width: 1000px) {
+            display: block;
+        }
     }
 
     &__modalbtn {
@@ -95,6 +111,7 @@
         font-size: 13px;
     }
 }
+
 
 .l-footer__newsletter::after {
     content: "";

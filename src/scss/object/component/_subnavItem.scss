@@ -1,4 +1,12 @@
 .c-subnavItem {
     text-align: center;
     padding: 10px 0;
+
+    &:last-child {
+        @media(max-width: 1000px) {
+            img {
+                display: none;
+            }
+        }
+    }
 }
