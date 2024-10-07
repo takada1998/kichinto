@@ -40,11 +40,13 @@
 // -----------------------------------------------------------------*/
 @use 'object/project/_nav';
 @use 'object/project/_subnav';
-@use 'object/project/_activebottle';
 @use 'object/project/_products';
 @use 'object/project/_categories';
 @use 'object/project/_collection';
 @use 'object/project/_info';
+@use 'object/project/_megamenu';
+@use 'object/project/_featured';
+@use 'object/project/_carousel';
 
 /*// -----------------------------------------------------------------
 // Utility

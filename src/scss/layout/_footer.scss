@@ -7,15 +7,18 @@
     }
 
     &__body {
-        height: 466px;
-        padding: 80px 80px 160px;
+        padding: 8rem 0 16rem;
 
         &__wrap {
+            justify-content: flex-start;
+            align-items: stretch;
+            width: 100%;
+            flex-direction: row-reverse;
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
             display: flex;
-
-            @media (max-width: 1000px) {
-                display: block;
-            }
+            flex-wrap: wrap;
         }
     }
 

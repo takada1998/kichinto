@@ -2,16 +2,23 @@
     display: flex;
     flex-flow: column;
     justify-content: space-between;
+    margin-bottom: 3%;
 
     /*両端揃えで配置*/
     &__topwarp {
         text-align: center;
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        width: 20rem;
+
+        margin-bottom: .8em;
     }
 
     &__botoomwarp {
         text-align: center;
-        margin: 25px 0px 9.6px;
         font-size: 12px;
+        margin-bottom: 0.8em;
     }
 
     &__top {

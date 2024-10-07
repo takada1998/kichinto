@@ -1,23 +1,24 @@
 .c-collectionItem {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 2rem;
 
-    @media (max-width: 600px) {
-        flex-wrap: wrap;
-    }
 
     &__bottomImage {
-
-        img {
-            width: 413px;
-            height: 275px;
-            margin-right: 20px;
-            object-fit: cover;
-        }
+        grid-column: span 4;
 
         p {
             color: #555555;
             font-size: 14px;
             margin: 10px 0px;
+        }
+
+        a {
+            display: block;
+            width: 100%;
+            position: relative;
+            text-decoration: none;
+            color: inherit;
         }
     }
 }

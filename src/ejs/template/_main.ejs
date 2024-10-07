@@ -2,109 +2,220 @@
     <div class="l-wrap">
         <!--ヘッダー-->
         <header class="l-header">
-            <div class="l-header__inner">
-                <div class="l-header__left">
-                    <div class="l-header__logo">
-                        <div class="l-header__logoWrap">
+            <div class="l-header__wrap">
+                <div class="l-header__inner">
+                    <div class="l-header__left">
+                        <div class="l-header__logo">
                             <div class="l-header__text">KINTO</div>
                         </div>
+                        <!-- グローバルメニュー left-->
+                        <div class="l-header__nav">
+                            <div class="p-nav">
+                                <ul class="p-nav__list">
+                                    <li class="c-navItem">
+                                        <a href="#" class="c-navItem__link__arrow" id="shopButton">SHOP</a>
+                                        <!-- SHOP megamenu-->
+                                        <div class="p-megamenu__shop" id="megamenu">
+                                            <div class="p-megamenu__column">
+                                                <ul>
+                                                    <li><a href="#">タンブラー&ボトル</a></li>
+                                                    <li><a href="#">ドリンクウェア</a></li>
+                                                    <li><a href="#">テーブルウェア</a></li>
+                                                    <li><a href="#">キッチンウェア</a></li>
+                                                    <li><a href="#">インテリア</a></li>
+                                                    <li><a href="#">シリーズ一覧</a></li>
+                                                </ul>
+                                                <div class="p-featured__categories">
+                                                    <h3>FEATURED DETEGORIES</h3>
+                                                    <div class="p-featured__imeags">
+                                                        <div class="p-featured__item">
+                                                            <img src="assets/images/megamenu.jpeg" alt="ギフト">
+                                                        </div>
+                                                        <div class="p-featured__item">
+                                                            <img src="assets/images/megamenu.jpeg" alt="ベビー・キッズ">
+                                                        </div>
+                                                        <div class="p-featured__item">
+                                                            <img src="assets/images/megamenu.jpeg" alt="パーソナライズ">
+                                                        </div>
+                                                        <div class="p-featured__item">
+                                                            <img src="assets/images/megamenu.jpeg" alt="シリーズ一覧">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <script>
+                                            document.getElementById('shopButton').addEventListener('click', function (event) {
+                                                event.preventDefault(); // デフォルトのリンク動作を防ぐ
+                                                const megamenu = document.getElementById('megamenu');
+
+                                                // トグル表示
+                                                megamenu.classList.toggle('active');
+
+                                                // メニュー以外をクリックしたら閉じる処理
+                                                document.addEventListener('click', function (e) {
+                                                    if (!megamenu.contains(e.target) && e.target.id !== 'shopButton') {
+                                                        megamenu.classList.remove('active');
+                                                    }
+                                                });
+                                            });
+                                        </script>
+
+                                    </li>
+                                    <li class="c-navItem">
+                                        <a href="#" class="c-navItem__link">JOURNAL</a>
+                                    </li>
+                                    <li class="c-navItem">
+                                        <a href="#" class="c-navItem__link">STYLING</a>
+                                    </li>
+                                    <li class="c-navItem">
+                                        <a href="#" class="c-navItem__link">NEWE</a>
+                                    </li>
+                                    <li class="c-navItem">
+                                        <a href="#" class="c-navItem__link__arrow" id="aboutButton">ABOUT</a>
+                                        <!-- ABPUT megamenu-->
+                                        <div class="p-megamenu__about" id="aboutMenu">
+                                            <div class="p-megamenu__aboutcolumn">
+                                                <ul>
+                                                    <li><a href=" #">ブランドについて</a></li>
+                                                    <li><a href="#">会社への思い</a></li>
+                                                    <li><a href="#">KINTOで働く</a></li>
+                                                    <li><a href="#">会社概要</a></li>
+                                                    <li><a href="#">法人のお客様へ</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <script>
+                                        document.getElementById('aboutButton').addEventListener('click', function (event) {
+                                            event.preventDefault(); // デフォルトのリンク動作を防ぐ
+                                            const aboutMenu = document.getElementById('aboutMenu');
+
+                                            // トグル表示
+                                            aboutMenu.classList.toggle('active');
+
+                                            // メニュー以外をクリックしたら閉じる処理
+                                            document.addEventListener('click', function (e) {
+                                                if (!aboutMenu.contains(e.target) && e.target.id !== 'aboutButton') {
+                                                    aboutMenu.classList.remove('active');
+                                                }
+                                            });
+                                        });
+                                    </script>
+
+                                    <li class="c-navItem">
+                                        <a href="#" class="c-navItem__link">LOCATION</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                    <!-- グローバルメニュー left-->
-                    <div class="l-header__nav">
-                        <div class="p-nav">
-                            <ul class="p-nav__list">
-                                <li class="c-navItem">
-                                    <a href="#" class="c-navItem__link">SHOP</a>
+                    <!-- ユーザーアイコン、ショッピングバッグ、検索、言語 -->
+                    <div class="l-header__right">
+                        <div class="p-subnav">
+                            <ul class="p-subnav__list">
+                                <li class="c-subnavItem">
+                                    <a href="/" class="c-subnavItem__link">
+                                        <img src="assets/images/acount.png" alt="acount"></a>
                                 </li>
-                                <li class="c-navItem">
-                                    <a href="#" class="c-navItem__link">JOURNAL</a>
+                                <li class="c-subnavItem">
+                                    <a href="/" class="c-subnavItem__link">
+                                        <img src="assets/images/cart.png" alt="cart"></a>
                                 </li>
-                                <li class="c-navItem">
-                                    <a href="#" class="c-navItem__link">STYLING</a>
+
+                                <li class="c-subnavItem">
+                                    <a href="/" class="c-subnavItem__link">
+                                        <img src="assets/images/search.png" alt="search"></a>
                                 </li>
-                                <li class="c-navItem">
-                                    <a href="#" class="c-navItem__link">NEWE</a>
+                                <li class="c-subnavItem">
+                                    <a href="/" class="c-subnavItems__link">
+                                        <img src="assets/images/language.png" alt="language"></a>
                                 </li>
-                                <li class="c-navItem">
-                                    <a href="#" class="c-navItem__link">ABOUT</a>
-                                </li>
-                                <li class="c-navItem">
-                                    <a href="#" class="c-navItem__link">LOCATION</a>
+                                <li class="c-subnavItem__hbg">
+                                    <div class="c-subnavItem__hbgicon">
+                                        <span class="c-subnavItem__span"></span>
+                                        <span class="c-subnavItem__span"></span>
+                                    </div>
                                 </li>
                             </ul>
                         </div>
                     </div>
                 </div>
-                <!-- ユーザーアイコン、ショッピングバッグ、検索、言語 -->
-                <div class="l-header__right">
-                    <div class="p-subnav">
-                        <ul class="p-subnav__list">
-                            <li class="c-subnavItem">
-                                <a href="/" class="c-subnavItem__link">
-                                    <img src="assets/images/acount.png" alt="acount"></a>
-                            </li>
-                            <li class="c-subnavItem">
-                                <a href="/" class="c-subnavItem__link">
-                                    <img src="assets/images/cart.png" alt="cart"></a>
-                            </li>
-
-                            <li class="c-subnavItem">
-                                <a href="/" class="c-subnavItem__link">
-                                    <img src="assets/images/search.png" alt="search"></a>
-                            </li>
-                            <li class="c-subnavItem">
-                                <a href="/" class="c-subnavItems__link">
-                                    <img src="assets/images/language.png" alt="language"></a>
-                            </li>
-
-                        </ul>
+            </div>
+        </header>
+        <!--メインー-->
+        <main>
+            <!--メイン トップイメージー-->
+            <main class="l-main__top"><a href="/" class="l-main__image">
+                    <img src="assets/images/top.jpeg" alt="トップ画像" />
+                </a></main>
+            <!--ACTIVE BOTTLEー-->
+            <div class="l-main__container">
+                <div class="l-main__leftsection">
+                    <div class="p-carousel__item active">
+                        <img src="assets/images/NATURE1.jpeg" alt="NATURE1">
+                    </div>
+                    <div class="p-carousel__item">
+                        <img src="assets/images/WARMTH1.jpeg" alt="WARMTH">
+                    </div>
+                    <!-- 必要に応じてカルーセルアイテムを追加 -->
+                </div>
+                <div class="l-main__rightsection">
+                    <div class="p-carousel__item active">
+                        <div class="p-carousel__inneritem">
+                            <h2>KAKOMI</h2>
+                            <a href="#" class="view-collection">VIEW COLLECTION →</a>
+                        </div>
+                        <img src="assets/images/NATURE2.jpeg" alt="NATURE">
+                    </div>
+                    <div class="p-carousel__item">
+                        <div class="p-carousel__inneritem">
+                            <h2>WARMTH</h2>
+                            <a href="#" class="view-collection">VIEW COLLECTION →</a>
+                        </div>
+                        <img src="assets/images/WARMTH2.jpeg" alt="WARMTH">
                     </div>
                 </div>
             </div>
-    </div>
-    </header>
-    <!--メインー-->
-    <main>
-        <!--メイン トップイメージー-->
-        <main class="l-main__top"><a href="/" class="l-main__image">
-                <img src="assets/images/top.jpeg" alt="トップ画像" />
-            </a></main>
-        <!--ACTIVE BOTTLEー-->
-        <div class="l-main__activebottle">
-            <div class="l-main__activebottle__left">
-                <div class="p-activebottle__left">
-                    <img src="assets/images/NATURE1.jpeg" alt="activebottle画像" />
-                    <!--<img src="assets/images/WARMTH1.jpeg" alt="activebottle画像" />-->
-                </div>
-            </div>
-            <div class="l-main__activebottle__right">
-                <div class="p-activebottle__rightTop">
-                    <h2>NATURE</h2>
-                    <!--<h2>WARMTH</h2>-->
-                    <a href="#" class="c-link__viewCollection">VIEW COLLECTION&ensp;→</a>
-                </div>
-                <div class="p-activebottle__rightBottom">
-                    <img src="assets/images/NATURE2.jpeg" alt="bottle画像" />
-                    <!--<img src="assets/images/WARMTH2.jpeg" alt="bottle画像" />-->
-                    </a>
-                </div>
-            </div>
-        </div>
+            <!-- 必要に応じてカルーセルアイテムを追加 -->
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    let currentIndex = 0;
+                    const leftItems = document.querySelectorAll('.l-main__leftsection .p-carousel__item');
+                    const rightItems = document.querySelectorAll('.l-main__rightsection .p-carousel__item');
+                    const itemCount = leftItems.length;
 
-        <!--PRODUCTSー-->
+                    function showNextItem() {
+                        leftItems[currentIndex].classList.remove('active');
+                        rightItems[currentIndex].classList.remove('active');
+
+                        currentIndex = (currentIndex + 1) % itemCount;
+
+                        leftItems[currentIndex].classList.add('active');
+                        rightItems[currentIndex].classList.add('active');
+                    }
+
+                    setInterval(showNextItem, 6000); // 6秒ごとにカルーセルアイテムを切り替え
+                });
+            </script>
+
+
+            <!--PRODUCTSー
         <div class="l-main__products">
             <div class="l-main__products__left">
                 <div class="p-products__leftTop">
                     <h2>PRODUCTS</h2>
                     <a href="#" class="c-link__view-collection l-main__viewmoer">VIEW ALL&ensp;→</a>
                 </div>
-                <!--Buttonー-->
+               
                 <div class="p-products__buttonContainer">
                     <a href="#" class="c-btn__rigth"></a>
                     <a href="#" class="c-btn__left"></a>
                 </div>
             </div>
-            <!--PRODUCTS right imgー-->
+            
             <div class="l-main__products__rigth">
                 <div class="p-products__rigthImage"><a href="/">
                         <img src="assets/images/dish.jpg" alt="products画像" />
@@ -115,156 +226,155 @@
                     </a>
                 </div>
             </div>
-        </div>
+        </div>-->
 
-        <!--CATEGORIESー-->
-        <div class="l-main__categories">
-            <div class="p-categories__top">
-                <h2>CATEGORIES</h2>
-                <a href="#" class="c-link__view-collection">VIEW ALL&ensp;→</a>
-            </div>
-            <hr class="l-main__hr1">
-            <div class="p-categories__bottom">
-                <ul class="c-images">
-                    <li class="c-images__categoriesImage"><a href="/">
-                            <img src="assets/images/kittin1.jpeg" alt=" categories画像" />
-                        </a>
-                    </li>
-                    <li class="c-images__categoriesImage"><a href="/">
-                            <img src="assets/images/kittin1.jpeg" alt=" categories画像" />
-                        </a>
-                    </li>
-                    <li class="c-images__categoriesImage"><a href="/">
-                            <img src="assets/images/kittin1.jpeg" alt=" categories画像" />
-                        </a>
-                    </li>
-                    <li class="c-images__categoriesImage"><a href="/">
-                            <img src="assets/images/kittin1.jpeg" alt=" categories画像" />
-                        </a>
-                    </li>
-                    <li class="c-images__categoriesImage"><a href="/">
-                            <img src="assets/images/kittin1.jpeg" alt=" categories画像" />
-                        </a>
-                    </li>
-                </ul>
-
-            </div>
-        </div>
-        <!--MARKit-2-->
-        <div class="l-main__MARKit">
-            <div class="l-main__MARKit__warp">
-                <div class="l-main__MARKit__left"><a href="/">
-                        <img src="assets/images/bottle2.jpeg" alt="トップ画像" />
-                    </a>
+            <!--CATEGORIESー-->
+            <div class="l-main__categories">
+                <div class="p-categories__top">
+                    <h2>CATEGORIES</h2>
+                    <a href="#" class="c-link__view-collection">VIEW ALL&ensp;→</a>
                 </div>
-                <div class="l-main__MARKit__right">
-                    <div class="l-main__MARKit__products">
-                        <div class="c-textBox">
-                            <div class="c-textBox__topwarp">
-                                <ul class="c-textBox__top">
-                                    <li class="c-textBox__first">
-                                        <p>MARK</p>
-                                    </li>
-                                    <li class="c-textBox__second">
-                                        <p>it</p>
-                                    </li>
-                                </ul>
-                                <ul class="c-textBox__topbottom">
-                                    <li>BY KINTO</li>
-                                </ul>
-                            </div>
-                            <div class="c-textBox__botoomwarp">
-                                <ul class="c-textBox__botoom">
-                                    <li>お好きな色のタンブラー・ボトルをレーザー刻印や<br>プリント加工で自分好みにカスタマイズ</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="l-main__MARKit__products">
-                            <ul class="l-main__MARKit__product__item">
-                                <li class="l-main__MARKit__productImage"><a href="/">
-                                        <img src="assets/images/bottle.png" alt="bottle画像" />
-                                    </a>
-                                    <a href="#" class="c-link__markitItem">WORKOUT BOTTLE</a>
-                                </li>
-                                <li class="l-main__MARKit__productImage"><a href="/">
-                                        <img src="assets/images/bottle.png" alt="cbottle" />
-                                    </a>
-                                    <a href="#" class="c-link__markitItem">WORKOUT BOTTLE</a>
-                                </li>
-                                <li class="l-main__MARKit__productImage"><a href="/">
-                                        <img src="assets/images/bottle.png" alt="bottle" />
-                                    </a>
-                                    <a href="#" class="c-link__markitItem">WORKOUT BOTTLE</a>
-                                </li>
+                <hr class="l-main__hr1">
+                <div class="p-categories__bottom">
+                    <ul class="c-images">
+                        <li class="c-images__categoriesImage"><a href="/">
+                                <img src="assets/images/kittin1.jpeg" alt=" categories画像" />
+                            </a>
+                        </li>
+                        <li class="c-images__categoriesImage"><a href="/">
+                                <img src="assets/images/kittin1.jpeg" alt=" categories画像" />
+                            </a>
+                        </li>
+                        <li class="c-images__categoriesImage"><a href="/">
+                                <img src="assets/images/kittin1.jpeg" alt=" categories画像" />
+                            </a>
+                        </li>
+                        <li class="c-images__categoriesImage"><a href="/">
+                                <img src="assets/images/kittin1.jpeg" alt=" categories画像" />
+                            </a>
+                        </li>
+                        <li class="c-images__categoriesImage"><a href="/">
+                                <img src="assets/images/kittin1.jpeg" alt=" categories画像" />
+                            </a>
+                        </li>
+                    </ul>
 
-                            </ul>
-                        </div>
-                        <div class="l-main__MARKit__productsView">
-                            <a href="#" class="c-link__view-collection l-main__viewmoer">VIEW MOER</a>
+                </div>
+            </div>
+            <!--MARKit-2-->
+            <div class="l-main__MARKit">
+                <div class="l-main__MARKit__warp">
+                    <div class="l-main__MARKit__left">
+                        <img src="assets/images/bottle2.jpeg" alt="トップ画像" />
+                    </div>
+                    <div class="l-main__MARKit__right">
+                        <div class="l-main__MARKit__products">
+                            <div class="c-textBox">
+                                <div class="c-textBox__topwarp">
+                                    <ul class="c-textBox__top">
+                                        <li class="c-textBox__first">
+                                            <p>MARK</p>
+                                        </li>
+                                        <li class="c-textBox__second">
+                                            <p>it</p>
+                                        </li>
+                                    </ul>
+                                    <ul class="c-textBox__topbottom">
+                                        <li>BY KINTO</li>
+                                    </ul>
+                                </div>
+                                <div class="c-textBox__botoomwarp">
+                                    <ul class="c-textBox__botoom">
+                                        <li>お好きな色のタンブラー・ボトルをレーザー刻印や<br>プリント加工で自分好みにカスタマイズ</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="l-main__MARKit__product__rightImg">
+                                <ul class="l-main__MARKit__product__item">
+                                    <li class="l-main__MARKit__productImage"><a href="/">
+                                            <img src="assets/images/bottle.png" alt="bottle画像" />
+                                        </a>
+                                        <a href="#" class="c-link__markitItem">WORKOUT BOTTLE</a>
+                                    </li>
+                                    <li class="l-main__MARKit__productImage"><a href="/">
+                                            <img src="assets/images/bottle.png" alt="cbottle" />
+                                        </a>
+                                        <a href="#" class="c-link__markitItem">WORKOUT BOTTLE</a>
+                                    </li>
+                                    <li class="l-main__MARKit__productImage"><a href="/">
+                                            <img src="assets/images/bottle.png" alt="bottle" />
+                                        </a>
+                                        <a href="#" class="c-link__markitItem">WORKOUT BOTTLE</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                            <div class="l-main__MARKit__productsView">
+                                <a href="#" class="c-link__view-collection l-main__viewmoer">VIEW MOER</a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <!--JOURNAL-->
-        <div class="l-main__JOURNAL">
-            <div class="l-main__JOURNALWprp">
-                <div class="l-main__JOURNALTop">
-                    <h2>JOURNAL</h2>
-                    <a href="#" class="c-link__view-collection">VIEW MORE&ensp;→</a>
-                </div>
-                <hr class="l-main__hr2">
-                <div class="p-collection">
-                    <ul class="c-collectionItem">
-                        <li class="c-collectionItem__bottomImage c-link"><a href="/">
-                                <img src="assets/images/bottle3.jpeg" alt=" JOURNAL画像" />
-                            </a>
-                            <p>PRODUCT STORY</p>
-                            <p>健康的でサスティナブルな暮らし暮らしに向けた</p>
-                            <p> - ACTIVE BOTTLE -</p>
-                        </li>
-                        <li class="c-collectionItem__bottomImage c-link"><a href="/">
-                                <img src="assets/images/RECIPE.jpeg" alt=" JOURNAL画像" />
-                            </a>
-                            <p>RECIPE</p>
-                            <p>器と素材を愉しむレシピ - メイン サイドメニュー -</p>
-                        </li>
-                        <li class="c-collectionItem__bottomImage c-link"><a href="/">
-                                <img src="assets/images/machi.jpeg" alt=" JOURNAL画像" />
-                            </a>
-                            <p>CITY TOUR</p>
-                            <p>PARTNER</p>
-                            <p>KINTO City Tour - アムステスダム vol.2 -</p>
-                        </li>
-                    </ul>
+            <!--JOURNAL-->
+            <div class="l-main__JOURNAL">
+                <div class="l-main__JOURNALWprp">
+                    <div class="l-main__JOURNALTop">
+                        <h2>JOURNAL</h2>
+                        <a href="#" class="c-link__view-collection">VIEW MORE&ensp;→</a>
+                    </div>
+                    <div class="p-collection">
+                        <ul class="c-collectionItem">
+                            <li class="c-collectionItem__bottomImage c-link"><a href="/">
+                                    <img src="assets/images/bottle3.jpeg" alt=" JOURNAL画像" />
+                                </a>
+                                <p>PRODUCT STORY</p>
+                                <p>健康的でサスティナブルな暮らし暮らしに向けた</p>
+                                <p> - ACTIVE BOTTLE -</p>
+                            </li>
+                            <li class="c-collectionItem__bottomImage c-link"><a href="/">
+                                    <img src="assets/images/RECIPE.jpeg" alt=" JOURNAL画像" />
+                                </a>
+                                <p>RECIPE</p>
+                                <p>器と素材を愉しむレシピ</p>
+                                <p> - メイン サイドメニュー -</p>
+                            </li>
+                            <li class="c-collectionItem__bottomImage c-link"><a href="/">
+                                    <img src="assets/images/machi.jpeg" alt=" JOURNAL画像" />
+                                </a>
+                                <p>CITY TOUR</p>
+                                <p>PARTNER</p>
+                                <p>KINTO City Tour - アムステスダム vol.2 -</p>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
-        <!--movie-->
-        <div class="l-main__movie">
-            <div class="l-main__movieinner"><a href="/">
-                    <img src="assets/images/movie.jpeg" alt="movie" />
-                </a>
-            </div>
-        </div>
-        <!--news-->
-        <div class="l-main__news">
-            <div class="l-main__newsWprp">
-                <div class="l-main__newsTop">
-                    <h2>NEWS</h2>
-                    <a href="#" class="l-main__more-collection">VIEW MORE&ensp;→</a>
+            <!--movie-->
+            <div class="l-main__movie">
+                <div class="l-main__movieinner"><a href="/">
+                        <img src="assets/images/movie.jpeg" alt="movie" />
+                    </a>
                 </div>
-                <hr class="l-main__hr3">
+            </div>
+            <!--news-->
+            <div class="l-main__news">
+                <div class="l-main__newsWprp">
+                    <div class="l-main__newsTop">
+                        <h2>NEWS</h2>
+                        <a href="#" class="l-main__more-collection">VIEW MORE&ensp;→</a>
+                    </div>
+                    <hr class="l-main__hr3">
 
-                <div class="l-main__newsinnert">
-                    <a href="#" class="c-news__item__date">2024.08.29</a>
-                    <a href="#" class="c-news__item__category">INFORMATION</a>
-                    <a href="#" class="c-news__item__title">リニューアルのお知らせ</a>
+                    <div class="l-main__newsinnert">
+                        <a href="#" class="c-news__item__date">2024.08.29</a>
+                        <a href="#" class="c-news__item__category">INFORMATION</a>
+                        <a href="#" class="c-news__item__title">リニューアルのお知らせ</a>
+                    </div>
+                    <hr class="l-main__hr4">
                 </div>
-                <hr class="l-main__hr4">
             </div>
-        </div>
-
+        </main>
 
 
         <!--フッター-->

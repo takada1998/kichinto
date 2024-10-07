@@ -1,0 +1,32 @@
+.p-carousel {
+    &__item {
+        display: none;
+        aspect-ratio: 4 / 3;
+        /* 4:3 アスペクト比 */
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        a {
+            font-size: 14px;
+            color: #666;
+            text-decoration: none;
+            margin-bottom: 20px;
+        }
+
+        img {
+
+            object-fit: cover;
+        }
+
+    }
+
+    &__item.active {
+        display: block;
+        opacity: 1;
+    }
+
+
+}
