@@ -24,7 +24,7 @@
 <meta name="twitter:image" content="" /><!--絶対パスで記述-->
 
 <title>TOP</title>
-<link href="assets/stylesheets/bundle09926dabcc99a07711c4.css" rel="stylesheet"></head>
+<link href="assets/stylesheets/bundlebeb16b4c5adb891773b7.css" rel="stylesheet"></head>
 <body>
 <div class="l-wrap">
 
@@ -177,11 +177,11 @@
             </div>
         </header>
         <!--メインー-->
-        <main>
+        <main class="l-main">
             <!--メイン トップイメージー-->
-            <main class="l-main__top"><a href="/" class="l-main__image">
-                    <img src="assets/images/top.jpeg" alt="トップ画像" />
-                </a></main>
+            <div class="l-main__top">
+                <img src="assets/images/top.jpeg" alt="トップ画像" />
+            </div>
             <!--ACTIVE BOTTLEー-->
             <div class="l-main__container">
                 <div class="l-main__leftsection">
@@ -191,7 +191,6 @@
                     <div class="p-carousel__item">
                         <img src="assets/images/WARMTH1.jpeg" alt="WARMTH">
                     </div>
-                    <!-- 必要に応じてカルーセルアイテムを追加 -->
                 </div>
                 <div class="l-main__rightsection">
                     <div class="p-carousel__item active">
@@ -210,7 +209,6 @@
                     </div>
                 </div>
             </div>
-            <!-- 必要に応じてカルーセルアイテムを追加 -->
             <script>
                 document.addEventListener('DOMContentLoaded', function () {
                     let currentIndex = 0;
@@ -231,33 +229,31 @@
                     setInterval(showNextItem, 6000); // 6秒ごとにカルーセルアイテムを切り替え
                 });
             </script>
-
-
             <!--PRODUCTSー
-        <div class="l-main__products">
-            <div class="l-main__products__left">
-                <div class="p-products__leftTop">
-                    <h2>PRODUCTS</h2>
-                    <a href="#" class="c-link__view-collection l-main__viewmoer">VIEW ALL&ensp;→</a>
+            <div class="l-main__products">
+                <div class="l-main__products__left">
+                    <div class="p-products__leftTop">
+                        <h2>PRODUCTS</h2>
+                        <a href="#" class="c-link__view-collection l-main__viewmoer">VIEW ALL&ensp;→</a>
+                    </div>
+
+                    <div class="p-products__buttonContainer">
+                        <a href="#" class="c-btn__rigth"></a>
+                        <a href="#" class="c-btn__left"></a>
+                    </div>
                 </div>
-               
-                <div class="p-products__buttonContainer">
-                    <a href="#" class="c-btn__rigth"></a>
-                    <a href="#" class="c-btn__left"></a>
+
+                <div class="l-main__products__rigth">
+                    <div class="p-products__rigthImage"><a href="/">
+                            <img src="assets/images/dish.jpg" alt="products画像" />
+                        </a>
+                    </div>
+                    <div class="p-products__rigthImage"><a href="/">
+                            <img src="assets/images/dish2.jpg" alt="products画像" />
+                        </a>
+                    </div>
                 </div>
-            </div>
-            
-            <div class="l-main__products__rigth">
-                <div class="p-products__rigthImage"><a href="/">
-                        <img src="assets/images/dish.jpg" alt="products画像" />
-                    </a>
-                </div>
-                <div class="p-products__rigthImage"><a href="/">
-                        <img src="assets/images/dish2.jpg" alt="products画像" />
-                    </a>
-                </div>
-            </div>
-        </div>-->
+            </div>-->
 
             <!--CATEGORIESー-->
             <div class="l-main__categories">
@@ -265,7 +261,6 @@
                     <h2>CATEGORIES</h2>
                     <a href="#" class="c-link__view-collection">VIEW ALL&ensp;→</a>
                 </div>
-                <hr class="l-main__hr1">
                 <div class="p-categories__bottom">
                     <ul class="c-images">
                         <li class="c-images__categoriesImage"><a href="/">
@@ -299,51 +294,53 @@
                         <img src="assets/images/bottle2.jpeg" alt="トップ画像" />
                     </div>
                     <div class="l-main__MARKit__right">
-                        <div class="l-main__MARKit__products">
-                            <div class="c-textBox">
-                                <div class="c-textBox__topwarp">
-                                    <ul class="c-textBox__top">
-                                        <li class="c-textBox__first">
-                                            <p>MARK</p>
-                                        </li>
-                                        <li class="c-textBox__second">
-                                            <p>it</p>
-                                        </li>
-                                    </ul>
-                                    <ul class="c-textBox__topbottom">
-                                        <li>BY KINTO</li>
-                                    </ul>
-                                </div>
-                                <div class="c-textBox__botoomwarp">
-                                    <ul class="c-textBox__botoom">
-                                        <li>お好きな色のタンブラー・ボトルをレーザー刻印や<br>プリント加工で自分好みにカスタマイズ</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="l-main__MARKit__product__rightImg">
-                                <ul class="l-main__MARKit__product__item">
-                                    <li class="l-main__MARKit__productImage"><a href="/">
-                                            <img src="assets/images/bottle.png" alt="bottle画像" />
-                                        </a>
-                                        <a href="#" class="c-link__markitItem">WORKOUT BOTTLE</a>
+                        <!--<div class="l-main__MARKit__products"></div>-->
+                        <div class="c-textBox">
+                            <div class="c-textBox__topwarp">
+                                <ul class="c-textBox__top">
+                                    <li class="c-textBox__first">
+                                        <p>MARK</p>
                                     </li>
-                                    <li class="l-main__MARKit__productImage"><a href="/">
-                                            <img src="assets/images/bottle.png" alt="cbottle" />
-                                        </a>
-                                        <a href="#" class="c-link__markitItem">WORKOUT BOTTLE</a>
+                                    <li class="c-textBox__second">
+                                        <p>it</p>
                                     </li>
-                                    <li class="l-main__MARKit__productImage"><a href="/">
-                                            <img src="assets/images/bottle.png" alt="bottle" />
-                                        </a>
-                                        <a href="#" class="c-link__markitItem">WORKOUT BOTTLE</a>
-                                    </li>
-
+                                </ul>
+                                <ul class="c-textBox__topbottom">
+                                    <li>BY KINTO</li>
                                 </ul>
                             </div>
-                            <div class="l-main__MARKit__productsView">
-                                <a href="#" class="c-link__view-collection l-main__viewmoer">VIEW MOER</a>
+                            <div class="c-textBox__botoomwarp">
+                                <ul class="c-textBox__botoom">
+                                    <li>お好きな色のタンブラー・ボトルをレーザー刻印や<br>プリント加工で自分好みにカスタマイズ</li>
+                                </ul>
                             </div>
                         </div>
+                        <div class="l-main__MARKit__product__rightImg">
+                            <ul class="l-main__MARKit__product__item">
+                                <li class="l-main__MARKit__productImage">
+                                    <img src="assets/images/bottle.png" alt="bottle画像" />
+                                    <div class="l-main__MARKitText">
+                                        <p>WORKOUT BOTTLE</p>
+                                    </div>
+                                </li>
+                                <li class="l-main__MARKit__productImage">
+                                    <img src="assets/images/bottle.png" alt="cbottle" />
+                                    <div class="l-main__MARKitText">
+                                        <p>WORKOUT BOTTLE</p>
+                                    </div>
+                                </li>
+                                <li class="l-main__MARKit__productImage">
+                                    <img src="assets/images/bottle.png" alt="bottle" />
+                                    <div class="l-main__MARKitText">
+                                        <p>WORKOUT BOTTLE</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="l-main__MARKit__productsView">
+                            <a href="#" class="c-link__view-collection l-main__viewmoer">VIEW MOER</a>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -395,176 +392,183 @@
                         <h2>NEWS</h2>
                         <a href="#" class="l-main__more-collection">VIEW MORE&ensp;→</a>
                     </div>
-                    <hr class="l-main__hr3">
-
-                    <div class="l-main__newsinnert">
-                        <a href="#" class="c-news__item__date">2024.08.29</a>
-                        <a href="#" class="c-news__item__category">INFORMATION</a>
-                        <a href="#" class="c-news__item__title">リニューアルのお知らせ</a>
+                    <div class="l-main__newslist">
+                        <ul class="p-newslist">
+                            <li class="p-newslist">
+                                <a href="#" class="p-newslist__item">
+                                    <dl class="c-newsitem__inner">
+                                        <dt>
+                                            <span>2024.08.29</span>
+                                        </dt>
+                                        <dd>
+                                            <span>INFORMATION</span>
+                                        </dd>
+                                        <dd>
+                                            <span>リニューアルのお知らせ</span>
+                                        </dd>
+                                    </dl>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
-                    <hr class="l-main__hr4">
                 </div>
             </div>
+
+
         </main>
 
-
         <!--フッター-->
-            <!--<footer class="l-footer">
-    <div class="l-footer__wrap">
-        <div class="l-footer__head">
-            <div class="l-footer__head__wrap">
-                <div class="l-footer__banner">
-                    <ul class="c-link__footerBanner">
-                        <a href="https://mollis-kinto.com/" target="_blank">
-                            <img src="//kinto.co.jp/cdn/shop/files/MOLLIS.webp?v=1698120774" alt="">
-                        </a>
-                        <a href="https://kinto.co.jp/pages/tumblers-and-bottles" target="_blank">
-                            <img src="//kinto.co.jp/cdn/shop/files/TUMBLER_BOTTLE.webp?v=1698120816" alt="">
-                        </a>
-                        <a href="https://kinto.co.jp/pages/recreation" target="_blank">
-                            <img src="//kinto.co.jp/cdn/shop/files/RECREATION.webp?v=1698120848" alt="">
-                        </a>
-                        <a href="/collections/gifts" target="_blank">
-                            <img src="//kinto.co.jp/cdn/shop/files/GIFT.webp?v=1698120863" alt="">
-                        </a>
-                    </ul>
-                </div>
+            <footer class="l-footer__wrap">
+    <div class="l-footer__head">
+        <div class="l-footer__head__wrap">
+            <div class="l-footer__banner">
+                <ul class="c-link__footerBanner">
+                    <a href="https://mollis-kinto.com/" target="_blank">
+                        <img src="//kinto.co.jp/cdn/shop/files/MOLLIS.webp?v=1698120774" alt="">
+                    </a>
+                    <a href="https://kinto.co.jp/pages/tumblers-and-bottles" target="_blank">
+                        <img src="//kinto.co.jp/cdn/shop/files/TUMBLER_BOTTLE.webp?v=1698120816" alt="">
+                    </a>
+                    <a href="https://kinto.co.jp/pages/recreation" target="_blank">
+                        <img src="//kinto.co.jp/cdn/shop/files/RECREATION.webp?v=1698120848" alt="">
+                    </a>
+                    <a href="/collections/gifts" target="_blank">
+                        <img src="//kinto.co.jp/cdn/shop/files/GIFT.webp?v=1698120863" alt="">
+                    </a>
+                </ul>
             </div>
         </div>
-        
-        <div class="l-footer__body">
-            <div class="l-footer__body__wrap">
-                <div class="l-footer__body__right">
-                    <div class="p-info">
-                        <div class="p-info__wrap">
-                            <div class="p-info__head">
-                                <div class="l-header__logoWrap">
-                                    <div class="c-text__infologo">KINTO</div>
-                                </div>
-                                <div class="l-footer__sns">
-                                    <ul class="c-sns">
-                                        <li>
-                                            <a href="#"><img src="assets/images/instagram.png" alt="instagram">
+    </div>
+
+    <div class="l-footer__body">
+        <div class="l-footer__body__wrap">
+            <div class="l-footer__body__right">
+                <div class="p-info">
+                    <div class="p-info__wrap">
+                        <div class="p-info__head">
+                            <div class="l-header__logoWrap">
+                                <div class="c-text__infologo">KINTO</div>
+                            </div>
+                            <div class="l-footer__sns">
+                                <ul class="c-sns">
+                                    <li>
+                                        <a href="#"><img src="assets/images/instagram.png" alt="instagram">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="assets/images/facebook.png" alt="facebook">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="assets/images/x.png" alt="X">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="assets/images/youtube.png" alt="youtube">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="assets/images/spotify.png" alt="spotify">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="assets/images/pinterest.png" alt="pinterest">
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="p-info__body">
+                            <p class="l-footer__title"><span>INFORMATION</span></p>
+                            <nav class="l-footer__nav">
+                                <div class="p-nav__footer">
+                                    <ul class="p-nav__footer">
+                                        <li class="p-nav__footer__text ">
+                                            <a href="#" class="c-link__text ">
+                                                <span>お問い合わせ</span>
                                             </a>
                                         </li>
-                                        <li>
-                                            <a href="#"><img src="assets/images/facebook.png" alt="facebook">
+
+                                        <li class="p-nav__footer__text ">
+                                            <a href="#" class="c-link__text">
+                                                <span>ご利用ガイド</span>
                                             </a>
                                         </li>
-                                        <li>
-                                            <a href="#"><img src="assets/images/x.png" alt="X">
+
+                                        <li class="p-nav__footer__text ">
+                                            <a href="#" class="c-link__text">
+                                                <span> ギフトラッピングについて</span>
                                             </a>
                                         </li>
-                                        <li>
-                                            <a href="#"><img src="assets/images/youtube.png" alt="youtube">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><img src="assets/images/spotify.png" alt="spotify">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><img src="assets/images/pinterest.png" alt="pinterest">
+
+                                        <li class="p-nav__footer__text ">
+                                            <a href="#" class="c-link__text">
+                                                <span> 法人のお客様へ</span>
                                             </a>
                                         </li>
 
                                     </ul>
                                 </div>
-                            </div>
-                            <div class="p-info__body">
-                                <p class="l-footer__title"><span>INFORMATION</span></p>
-                                <nav class="l-footer__nav">
-                                    <div class="p-nav__footer">
-                                        <ul class="p-nav__footer">
-                                            <li class="p-nav__footer__text ">
-                                                <a href="#" class="c-link__text ">
-                                                    <span>お問い合わせ</span>
-                                                </a>
-                                            </li>
-
-                                            <li class="p-nav__footer__text ">
-                                                <a href="#" class="c-link__text">
-                                                    <span>ご利用ガイド</span>
-                                                </a>
-                                            </li>
-
-                                            <li class="p-nav__footer__text ">
-                                                <a href="#" class="c-link__text">
-                                                    <span> ギフトラッピングについて</span>
-                                                </a>
-                                            </li>
-
-                                            <li class="p-nav__footer__text ">
-                                                <a href="#" class="c-link__text">
-                                                    <span> 法人のお客様へ</span>
-                                                </a>
-                                            </li>
-
-                                        </ul>
-                                    </div>
-                                </nav>
-                            </div>
+                            </nav>
                         </div>
                     </div>
                 </div>
-                <div class="l-footer__body__left" id="shopify-section-footer">
-                    <div class="l-footer__newsletter">
-                        <div class="l-footer__newsletter__wrap">
-                            <p class="l-footer__title"><span>NEWSLETTER</span></p>
-                            <p class="l-footer__newsletter__text">
-                                KINTOの最新情報やアイテムのご紹介、メール会員限定の情報などをお届けします。
-                            </p>
-                            <a href="#" class="l-footer__newsletter__button"><span>会員登録はこちら</span></a>
-                        </div>
+            </div>
+            <div class="l-footer__body__left" id="shopify-section-footer">
+                <div class="l-footer__newsletter">
+                    <div class="l-footer__newsletter__wrap">
+                        <p class="l-footer__title"><span>NEWSLETTER</span></p>
+                        <p class="l-footer__newsletter__text">
+                            KINTOの最新情報やアイテムのご紹介、メール会員限定の情報などをお届けします。
+                        </p>
+                        <a href="#" class="l-footer__newsletter__button"><span>会員登録はこちら</span></a>
                     </div>
                 </div>
             </div>
         </div>
-
-
-        <div class="l-footer__foot">
-            <div class="l-footer__foot__wrap">
-                <div class="l-footer__foot__left">
-                    <div class="l-footer__modalbtn">
-                        <a href="#" class="l-footer__subnav__linkfirst">
-                            <span>SELECT YOUR REGION SITE</span>
-                        </a>
-                    </div>
-
-                    <nav class="l-footer__subnav">
-                        <div class="l-footer__subnav__wrap">
-                            <ul class="l-footer__subnav__ul">
-                                <li class="l-footer__subnav__li">
-                                    <a href="#" class="l-footer__subnav__link">
-                                        <span>プライバシーポリシー</span>
-                                    </a>
-                                </li>
-                                <li class="l-footer__subnav__li">
-                                    <a href="#" class="l-footer__subnav__link ">
-                                        <span>特定商取引法</span>
-                                    </a>
-                                </li>
-                                <li class="l-footer__subnav__li">
-                                    <a href="#" class="l-footer__subnav__link ">
-                                        <span>利用規約</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </nav>
-                </div>
-                <div class="l-footer__foot__right">
-                    <p class="c-text__copyright">© 2024 KINTO Co., Ltd. All rights reserved.</p>
-                </div>
-            </div>
-        </div>-
     </div>
-</footer>->
 
-<script>
 
-</script>
-</div>
-<script type="text/javascript" src="assets/javascripts/bundle09926dabcc99a07711c4.js"></script></body>
+    <div class="l-footer__foot">
+        <div class="l-footer__foot__wrap">
+            <div class="l-footer__foot__left">
+                <div class="l-footer__modalbtn">
+                    <a href="#" class="l-footer__subnav__linkfirst">
+                        <span>SELECT YOUR REGION SITE</span>
+                    </a>
+                </div>
+
+                <nav class="l-footer__subnav">
+                    <div class="l-footer__subnav__wrap">
+                        <ul class="l-footer__subnav__ul">
+                            <li class="l-footer__subnav__li">
+                                <a href="#" class="l-footer__subnav__link">
+                                    <span>プライバシーポリシー</span>
+                                </a>
+                            </li>
+                            <li class="l-footer__subnav__li">
+                                <a href="#" class="l-footer__subnav__link ">
+                                    <span>特定商取引法</span>
+                                </a>
+                            </li>
+                            <li class="l-footer__subnav__li">
+                                <a href="#" class="l-footer__subnav__link ">
+                                    <span>利用規約</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div class="l-footer__foot__right">
+                <p class="c-text__copyright">© 2024 KINTO Co., Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+    </div>
+</footer>
+</div><!-- l-wrap -->
+<script type="text/javascript" src="assets/javascripts/bundlebeb16b4c5adb891773b7.js"></script></body>
 
 </html>

@@ -6,34 +6,51 @@
 
     /*両端揃えで配置*/
     &__topwarp {
-        text-align: center;
         position: relative;
+        width: 20rem;
+        margin-bottom: 30px;
         margin-left: auto;
         margin-right: auto;
-        width: 20rem;
-
-        margin-bottom: .8em;
     }
 
     &__botoomwarp {
-        text-align: center;
-        font-size: 12px;
-        margin-bottom: 0.8em;
+        li {
+            font-size: 12px;
+            font-weight: 400;
+            letter-spacing: .12em;
+            line-height: 2.16;
+            margin-bottom: .8em;
+            display: block;
+            text-align: justify;
+            text-align: center;
+            color: #555555;
+        }
     }
 
     &__top {
         display: flex;
         justify-content: center;
+    }
 
+    &__topbottom {
+        display: flex;
+        justify-content: center;
+
+        li {
+            font-size: 15px;
+            letter-spacing: 0.12em;
+        }
     }
 
     &__first {
+        letter-spacing: 0.12em;
         font-size: 50px;
         line-height: 1;
     }
 
     &__second {
-        font-size: 40px;
+        letter-spacing: 0.12em;
+        font-size: 30px;
         line-height: 1;
     }
 
