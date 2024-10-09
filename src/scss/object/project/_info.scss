@@ -1,21 +1,24 @@
 .p-info {
-    &__head {
-        width: 520px;
-        height: 177px;
-    }
-
     &__wrap {
         display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: stretch;
+        width: 100%;
+        flex-wrap: nowrap;
+    }
 
-        @media (max-width: 1000px) {
-            display: block;
-        }
+    &__wrap>div {
+        width: 50%;
+    }
+
+    &__head {
+        //width: 50%;
     }
 
     &__body {
-        width: 520px;
-        padding: 0px 100px;
-        justify-content: space-between;
+        width: 50%;
+        padding: 0 3rem;
 
     }
 

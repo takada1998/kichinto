@@ -1,13 +1,22 @@
 .c-text {
     &__infologo {
+        margin-bottom: 2rem;
         font-size: 24px;
-        font-weight: bold;
-        margin: 20px 0px 20 0px;
+        margin-right: 2.5vw;
         color: #555555;
+        letter-spacing: 0.08em;
     }
 
     &__copyright {
+        display: block;
+        padding: 10px;
+        margin-right: -1rem;
+        white-space: nowrap;
+        font-size: 10px;
+        font-weight: 400;
+        letter-spacing: .12em;
+        line-height: 1;
         color: #989898;
-        font-size: 12px;
+        transform-origin: center center;
     }
 }
