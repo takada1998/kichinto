@@ -5,6 +5,11 @@
         //justify-content: space-between;
         //align-items: center;
 
+        @media only screen and (max-width: 680px) {
+            padding: 4rem 0 1rem;
+            background-color: hsla(180, 8%, 97%, 1);
+        }
+
         &__wrap {
             width: 90%;
             margin-left: auto;
@@ -21,12 +26,34 @@
             width: 100%;
             width: calc(102.5% - 1px);
             margin-left: -1.25%;
+
+            @media only screen and (max-width: 680px) {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+            }
+
+            @media only screen and (max-width: 1000px) {
+                width: calc(100% - 1px + 1rem);
+                margin-left: -.5rem;
+            }
         }
 
         a {
             width: 25%;
             padding-left: 1.25%;
             padding-right: 1.25%;
+
+            @media only screen and (max-width: 680px) {
+                width: 100%;
+                padding-left: 0;
+                padding-right: 0;
+            }
+
+            @media only screen and (max-width: 1000px) {
+                width: calc(100% - 1px + 0rem);
+                //margin-left: -.5rem;
+            }
         }
 
         img {
@@ -38,6 +65,10 @@
     &__body {
         padding: 4rem 0 5rem;
 
+        @media only screen and (max-width: 680px) {
+            padding: 0;
+        }
+
         &__wrap {
             justify-content: flex-start;
             align-items: stretch;
@@ -47,6 +78,14 @@
             margin-right: auto;
             display: flex;
             flex-wrap: wrap;
+
+            @media only screen and (max-width: 680px) {
+                display: block;
+            }
+
+            @media only screen and (max-width: 1000px) {
+                width: 100%;
+            }
         }
 
         &__wrap>div {
@@ -58,6 +97,18 @@
             padding-left: 6rem;
             border-left: 1px solid hsla(0, 0%, 90%, 1);
 
+            @media only screen and (max-width: 680px) {
+                width: 100%;
+                padding: 1rem 5vw 4rem;
+            }
+
+            @media only screen and (max-width: 1000px) {
+                border-left: none;
+                max-width: 100%;
+                margin-left: auto;
+                margin-right: auto;
+                background-color: hsla(180, 8%, 97%, 1);
+            }
         }
     }
 
@@ -71,8 +122,33 @@
         margin-bottom: 2rem;
     }
 
+    &__newsletter {
+        @media only screen and (max-width: 1000px) {
+            background-color: hsla(0, 0%, 100%, 1);
+        }
+    }
+
     &__newsletter__wrap {
         padding-bottom: 6rem;
+
+        @media only screen and (max-width: 1000px) {
+            padding: 4rem 5vw;
+        }
+    }
+
+    &__title {
+        font-size: calc(var(12px) + 1px);
+        font-weight: 400;
+        letter-spacing: .1em;
+        line-height: 1;
+        display: block;
+        color: #989898;
+        margin-bottom: 2rem;
+
+        @media only screen and (max-width: 1000px) {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
     }
 
     &__newsletter__text {
@@ -81,6 +157,11 @@
         letter-spacing: .12em;
         line-height: 1.8;
         margin-bottom: 4rem;
+
+        @media only screen and (max-width: 1000px) {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
     }
 
     &__newsletter__button {
@@ -95,6 +176,13 @@
         color: #555555;
     }
 
+
+    &__body__right {
+        @media only screen and (max-width: 680px) {
+            padding: 4rem 5vw;
+        }
+    }
+
     &__logoWrap {
         display: block;
         width: 9rem;
@@ -107,6 +195,11 @@
             font-size: 0;
             margin-left: -0.5rem;
             white-space: nowrap;
+
+            @media only screen and (max-width: 1000px) {
+                text-align: center;
+                margin-left: 0;
+            }
         }
 
         li {
@@ -119,18 +212,15 @@
             width: 2.3rem;
             height: 2.3rem;
             display: block;
+
+            @media only screen and (max-width: 680px) {
+                width: 2.2rem;
+                height: 2.2rem;
+            }
         }
     }
 
-    &__title {
-        font-size: calc(var(12px) + 1px);
-        font-weight: 400;
-        letter-spacing: .1em;
-        line-height: 1;
-        display: block;
-        color: #989898;
-        margin-bottom: 2rem;
-    }
+
 
 
     &__foot {
@@ -147,6 +237,14 @@
         width: 90%;
         margin-left: auto;
         margin-right: auto;
+
+        @media only screen and (max-width: 680px) {
+            display: block;
+        }
+    }
+
+    &__foot__left {
+        text-align: center;
     }
 
     &__modalbtn {
@@ -185,6 +283,12 @@
 
     &__foot__right {
         text-align: right;
+
+        @media only screen and (max-width: 680px) {
+            text-align: center;
+        }
+
+
     }
 }
 
