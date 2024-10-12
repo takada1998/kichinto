@@ -41,6 +41,8 @@
 
         li {
             grid-column: span 4;
+            display: block;
+            position: relative;
 
             @media only screen and (max-width: 680px) {
                 grid-column: span 12;
