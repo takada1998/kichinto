@@ -122,6 +122,21 @@
         margin-bottom: 2rem;
     }
 
+
+    &__title__info {
+        font-size: 13px;
+        font-weight: 400;
+        letter-spacing: .1em;
+        line-height: 1;
+        display: block;
+        color: #989898;
+        margin-bottom: 2rem;
+
+        @media only screen and (max-width: 1000px) {
+            display: none;
+        }
+    }
+
     &__newsletter {
         @media only screen and (max-width: 1000px) {
             background-color: hsla(0, 0%, 100%, 1);

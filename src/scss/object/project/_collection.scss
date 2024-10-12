@@ -3,6 +3,12 @@
     /*  左右均等に配置※すべてのマージン幅が同じ  */
     justify-content: space-evenly;
 
+    li {
+        @media only screen and (max-width: 680px) {
+            margin-bottom: 4rem;
+        }
+    }
+
     li img {
         width: 100%;
         height: 100%;
@@ -13,7 +19,10 @@
     }
 
     p {
+        font-size: 12px;
+        font-weight: 400;
+        letter-spacing: .12em;
+        line-height: 2.16;
         color: #555555;
-        font-size: 14px;
     }
 }

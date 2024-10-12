@@ -1,12 +1,18 @@
 .p-categories {
     &__top {
         display: flex;
-
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: start;
+        width: 100%;
+        border-bottom: 1px solid hsla(0, 0%, 90%, 1);
+        padding-bottom: 17px;
+        margin-bottom: 36px;
 
         h2 {
             color: #555555;
             font-size: 14px;
-            padding: 0px 0px 17px;
+            //padding: 0px 0px 17px;
 
             @media only screen and (max-width: 680px) {
                 margin-bottom: 2rem;
@@ -21,13 +27,14 @@
             color: #555555;
             font-size: 11px;
             margin: 0 0 0 auto;
+
         }
     }
 
     &__bottom ul {
         display: grid;
         grid-template-columns: repeat(12, 1fr);
-        gap: 2rem;
+        gap: 1.5rem;
         //flex-wrap: wrap;
         //justify-content: center;
 

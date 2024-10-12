@@ -3,15 +3,13 @@
     grid-template-columns: repeat(12, 1fr);
     gap: 2rem;
 
+    @media only screen and (max-width: 680px) {
+        display: block;
+    }
+
 
     &__bottomImage {
         grid-column: span 4;
-
-        p {
-            color: #555555;
-            font-size: 14px;
-            margin: 10px 0px;
-        }
 
         a {
             display: block;
@@ -21,4 +19,9 @@
             color: inherit;
         }
     }
+}
+
+.c-collectionItem__bottomImage p:first-of-type {
+    color: #989898;
+    margin-top: 1rem;
 }
