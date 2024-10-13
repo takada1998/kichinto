@@ -24,7 +24,7 @@
 <meta name="twitter:image" content="" /><!--絶対パスで記述-->
 
 <title>TOP</title>
-<link href="assets/stylesheets/bundle2aec3aef42bc72407dd6.css" rel="stylesheet"></head>
+<link href="assets/stylesheets/bundle5e43403c9767a3390a64.css" rel="stylesheet"></head>
 <body>
 <div class="l-wrap">
 
@@ -323,11 +323,12 @@
                                 </li>
                                 <li class="c-subnavItem">
                                     <a href="/" class="c-subnavItems__link">
-                                        <img src="assets/images/language.png" alt="language"></a>
+                                        <img src="assets/images/language.png" alt="language">
+                                        <h2>JP</h2>
+                                    </a>
                                 </li>
                                 <li class="c-subnavItem__hbg">
                                     <div class="c-subnavItem__hbgicon">
-                                        <span class="c-subnavItem__span"></span>
                                         <span class="c-subnavItem__span"></span>
                                     </div>
                                 </li>
@@ -343,57 +344,84 @@
             <div class="l-main__top">
                 <img src="assets/images/top.jpeg" alt="トップ画像" />
             </div>
+
             <!--ACTIVE BOTTLEー-->
             <div class="l-main__container">
                 <div class="l-main__container__wrap">
                     <div class="l-main__container__inner">
-                        <div class="l-main__leftsection">
-                            <div class="p-carousel__item active">
-                                <img src="assets/images/NATURE1.jpeg" alt="NATURE1">
-                            </div>
-                            <div class="p-carousel__item">
-                                <img src="assets/images/WARMTH1.jpeg" alt="WARMTH">
-                            </div>
-                        </div>
-                        <div class="l-main__rightsection">
-                            <div class="p-carousel__item active">
-                                <div class="p-carousel__inneritem">
-                                    <h2>KAKOMI</h2>
-                                    <a href="#" class="collection">VIEW COLLECTION →</a>
+                        <ul class="p-carousel__wrap">
+                            <li class="p-carousel__inner">
+                                <div class="p-carousel__iteminner">
+                                    <div class="p-carousel__imgitem__image1">
+                                        <img src="assets/images/NATURE1.jpeg" alt="NATURE">
+                                    </div>
+                                    <div class="p-carousel__imgitem__image2">
+                                        <img src="assets/images/NATURE2.jpeg" alt="NATURE">
+                                    </div>
+                                    <div class="p-carousel__textBox">
+                                        <div class="p-carousel__textBox__inner">
+                                            <div class="p-carousel__textBox__title__wrap">
+                                                <div class="p-carousel__textBox__title__title">
+                                                    <h2>KAKOMI</h2>
+                                                </div>
+                                            </div>
+                                            <div class="p-carousel__textBox__link">
+                                                <a href="#" class="collection">VIEW COLLECTION →</a>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <img src="assets/images/NATURE2.jpeg" alt="NATURE">
-                            </div>
-                            <div class="p-carousel__item">
-                                <div class="p-carousel__inneritem">
-                                    <h2>WARMTH</h2>
-                                    <a href="#" class="view-collection">VIEW COLLECTION →</a>
+                            </li>
+                            <li class="p-carousel__inner">
+                                <div class="p-carousel__iteminner">
+                                    <div class="p-carousel__imgitem__image1">
+                                        <img src="assets/images/WARMTH1.jpeg" alt="WARMTH">
+                                    </div>
+                                    <div class="p-carousel__imgitem__image2">
+                                        <img src="assets/images/WARMTH2.jpeg" alt="WARMTH">
+                                    </div>
+                                    <div class="p-carousel__textBox">
+                                        <div class="p-carousel__textBox__inner">
+                                            <div class="p-carousel__textBox__title__wrap">
+                                                <div class="p-carousel__textBox__title__title">
+                                                    <h2>WARMTH</h2>
+                                                </div>
+                                            </div>
+                                            <div class="p-carousel__textBox__link">
+                                                <a href="#" class="collection">VIEW COLLECTION →</a>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <img src="assets/images/WARMTH2.jpeg" alt="WARMTH">
-                            </div>
-                        </div>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
             <script>
                 document.addEventListener('DOMContentLoaded', function () {
                     let currentIndex = 0;
-                    const leftItems = document.querySelectorAll('.l-main__leftsection .p-carousel__item');
-                    const rightItems = document.querySelectorAll('.l-main__rightsection .p-carousel__item');
-                    const itemCount = leftItems.length;
+                    const items = document.querySelectorAll('.p-carousel__inner');
+                    const itemCount = items.length;
+                    const intervalTime = 8000; // 8秒ごとに切り替え
 
                     function showNextItem() {
-                        leftItems[currentIndex].classList.remove('active');
-                        rightItems[currentIndex].classList.remove('active');
+                        // 現在のスライドを非表示
+                        items[currentIndex].classList.remove('active');
 
+                        // 次のスライドに切り替え
                         currentIndex = (currentIndex + 1) % itemCount;
-
-                        leftItems[currentIndex].classList.add('active');
-                        rightItems[currentIndex].classList.add('active');
+                        items[currentIndex].classList.add('active');
                     }
 
-                    setInterval(showNextItem, 6000); // 6秒ごとにカルーセルアイテムを切り替え
+                    // 初期スライドを表示
+                    items[currentIndex].classList.add('active');
+
+                    // 一定時間ごとにスライドを切り替え
+                    setInterval(showNextItem, intervalTime);
                 });
             </script>
+
             <!--PRODUCTSー
             <div class="l-main__products">
                 <div class="l-main__products__left">
@@ -471,6 +499,7 @@
             <div class="l-main__MARKit">
                 <div class="l-main__MARKit__warp">
                     <div class="l-main__MARKit__left">
+                        <img src="assets/images/bottle1.jpeg" alt="トップ画像" />
                         <img src="assets/images/bottle2.jpeg" alt="トップ画像" />
                     </div>
                     <div class="l-main__MARKit__right">
@@ -524,6 +553,66 @@
                     </div>
                 </div>
             </div>
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    const images = document.querySelectorAll('.l-main__MARKit__left img');
+                    let currentIndex = 0;
+                    const imageCount = images.length;
+                    const intervalTime = 3000; // 3秒ごとに切り替え
+
+                    // 画像の切り替えを行う関数
+                    function switchImage() {
+                        // 現在表示されている画像を非表示にする
+                        images[currentIndex].classList.remove('active');
+
+                        // 次の画像に切り替え
+                        currentIndex = (currentIndex + 1) % imageCount;
+
+                        // 次の画像を表示
+                        images[currentIndex].classList.add('active');
+                    }
+
+                    // 初期表示：最初の画像に active クラスを付与
+                    images[currentIndex].classList.add('active');
+
+                    // 一定時間ごとに画像を切り替える
+                    setInterval(switchImage, intervalTime);
+                });
+
+
+                document.addEventListener('DOMContentLoaded', function () {
+                    const items = document.querySelectorAll('.l-main__MARKit__productImage');
+                    const itemCount = items.length;
+                    let currentIndex = 0;
+
+                    // 初期化：全てのアイテムを非表示
+                    function hideAllItems() {
+                        items.forEach(item => item.classList.remove('visible'));
+                    }
+
+                    // アイテムを順次表示させる
+                    function showNextItem() {
+                        // 現在のインデックスまでのアイテムを表示
+                        for (let i = 0; i <= currentIndex; i++) {
+                            items[i].classList.add('visible');
+                        }
+
+                        // 次のアイテムに進む
+                        currentIndex++;
+
+                        // 最後のアイテムまで表示されたら最初に戻る
+                        if (currentIndex >= itemCount) {
+                            setTimeout(() => {
+                                hideAllItems(); // 全てのアイテムを非表示に戻す
+                                currentIndex = 0; // インデックスをリセット
+                            }, 2000); // 全て表示後、2秒待ってリセット
+                        }
+                    }
+
+                    // 2秒ごとにアイテムを順次表示
+                    setInterval(showNextItem, 1000);
+                });</script>
+
             <!--JOURNAL-->
             <div class="l-main__JOURNAL">
                 <div class="l-main__JOURNALWprp">
@@ -762,6 +851,6 @@
     </div>
 </footer>
 </div><!-- l-wrap -->
-<script type="text/javascript" src="assets/javascripts/bundle2aec3aef42bc72407dd6.js"></script></body>
+<script type="text/javascript" src="assets/javascripts/bundle5e43403c9767a3390a64.js"></script></body>
 
 </html>

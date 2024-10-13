@@ -1,32 +1,122 @@
 .p-carousel {
-    &__item {
-        display: none;
-        aspect-ratio: 4 / 3;
-        /* 4:3 アスペクト比 */
+    &__inner {
+        position: absolute;
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+        z-index: 1;
+    }
 
-        h2 {
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
+    &__iteminner {
+        position: relative;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 2rem;
+    }
 
-        a {
-            font-size: 14px;
-            color: #666;
-            text-decoration: none;
-            margin-bottom: 20px;
+    &__imgitem__image1 {
+        grid-column: span 6;
+        grid-row: 1/span 2;
+        align-self: flex-start;
+        display: block;
+
+        @media only screen and (max-width: 680px) {
+            grid-column: 1 / span 11;
+            grid-row: 1 / span 1;
         }
 
         img {
-
+            display: block;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: calc(100% + 9vw);
+            margin-left: calc(9vw* -1);
+            aspect-ratio: 4 / 3;
             object-fit: cover;
+        }
+    }
+
+    &__imgitem__image2 {
+        grid-column: 8 / span 5;
+        grid-row: 2 / span 1;
+        align-self: flex-end;
+
+        @media only screen and (max-width: 680px) {
+            grid-column: 4 / span 9;
+            grid-row: 3 / span 1;
+
+            img {
+                width: 100%;
+                aspect-ratio: 1 / 1;
+                object-fit: cover;
+            }
+        }
+    }
+
+    &__textBox {
+        grid-column: 8 / span 5;
+        grid-row: 1 / span 1;
+        align-self: flex-end;
+        padding: 18% 0 10%;
+
+        @media only screen and (max-width: 680px) {
+            grid-column: 2 / span 10;
+            grid-row: 2 / span 1;
+            padding: 3% 0;
+        }
+
+        &__title__wrap {
+            margin-bottom: 21px;
+
+            @media only screen and (max-width: 680px) {
+                margin-bottom: 0;
+            }
+        }
+
+        &__title__title {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-items: baseline;
+            width: 100%;
+            gap: 25px;
+
+            @media only screen and (max-width: 1000px) {
+                display: block;
+                margin-bottom: 0;
+            }
+
+
+            h2 {
+                font-size: 25px;
+                font-weight: 400;
+                letter-spacing: .12rem;
+                line-height: 1;
+                display: block;
+                color: #555555;
+            }
+        }
+
+        &__link {
+            font-size: 12px;
+            font-weight: 400;
+            letter-spacing: .12em;
+            line-height: 1;
+            position: relative;
+            padding: 1rem 0;
+            overflow: hidden;
+            color: #555555;
         }
 
     }
-
-    &__item.active {
-        display: block;
-        opacity: 1;
-    }
+}
 
 
+
+
+
+.p-carousel__inner.active {
+    opacity: 1;
+    position: relative;
 }
