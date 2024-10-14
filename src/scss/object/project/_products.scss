@@ -1,22 +1,44 @@
 .p-products {
-    &__leftTop {
 
-        h2 {
-            color: #555555;
-            font-size: 14px;
-            padding: 210px 0px 50px 50px;
-        }
+    &__slideText {
 
-        a {
-            color: #555555;
-            font-size: 11px;
-            padding: 30px 0px 50px 50px;
+        grid-column: 1 / span 3;
+    }
 
+    &__slideImage {
+        padding-left: 0px;
+        //padding-right: 20%;
+        grid-column: 4 / span 9;
+        width: calc(100% + 9vw);
+        margin-right: calc(9vw* -1);
+
+        ul {
+            display: flex;
+            height: 100%;
+            margin: 0 !important;
         }
     }
 
-    &__buttonContainer {
-        display: flex;
-        justify-content: center;
-    }
+}
+
+.p-products__slideImage ul {
+    overflow: visible;
+    /* 右側に「チラ見せ」部分を表示するために必要 */
+}
+
+.p-products__slideImage ul li {
+    padding: 0 10px;
+    /* スライド間に余白を入れる */
+}
+
+.p-products__slideImage ul li img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 5 / 6;
+    object-fit: cover;
+}
+
+.slick-list {
+    padding-right: 120px;
+    /* 右側にチラ見せの余白を作る */
 }

@@ -1,33 +1,45 @@
 
     <!DOCTYPE html>
 <html lang="ja">
+
 <head>
-<meta charset="UTF-8" />
-<meta name="description" content="トップのdescription" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<link rel="icon" href="./assets/images/fav.png" />
-<!--facebook用-->
-<meta property="og:title" content="TOP" />
-<meta property="og:description" content="トップのdescription" />
-<meta property="og:url" content="" />
-<meta property="og:image" content="" /><!--絶対パスで記述-->
-<meta property="og:type" content="website" />
-<meta property="og:site_name" content="TOP" />
-<meta property="og:locale" content="ja_JP" />
-<!--twitter用-->
-<meta name="twitter:card" content="summary_large_image" /><!-- summary summary_large_image photo gallery appから選ぶ -->
-<!-- <meta name="twitter:site" content="" /> --><!--twitterがあれば記述-->
-<meta name="twitter:title" content="TOP" />
-<meta name="twitter:url" content="" />
-<meta name="twitter:description" content="トップのdescription" />
-<meta name="twitter:image" content="" /><!--絶対パスで記述-->
+    <meta charset="UTF-8" />
+    <meta name="description" content="トップのdescription" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="icon" href="./assets/images/fav.png" />
+    <!--facebook用-->
+    <meta property="og:title" content="TOP" />
+    <meta property="og:description" content="トップのdescription" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" /><!--絶対パスで記述-->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="TOP" />
+    <meta property="og:locale" content="ja_JP" />
+    <!--twitter用-->
+    <meta name="twitter:card" content="summary_large_image" /><!-- summary summary_large_image photo gallery appから選ぶ -->
+    <!-- <meta name="twitter:site" content="" /> --><!--twitterがあれば記述-->
+    <meta name="twitter:title" content="TOP" />
+    <meta name="twitter:url" content="" />
+    <meta name="twitter:description" content="トップのdescription" />
+    <meta name="twitter:image" content="" /><!--絶対パスで記述-->
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="main.js"></script>
 
-<title>TOP</title>
-<link href="assets/stylesheets/bundle4a4eb1f2d683de56c4c1.css" rel="stylesheet"></head>
+    <title>
+        TOP
+    </title>
+<link href="assets/stylesheets/bundle9536d56f3bbbb1f55217.css" rel="stylesheet"></head>
+
 <body>
-<div class="l-wrap">
-
+    <div class="l-wrap">
 
         <body>
     <div class="l-wrap">
@@ -293,8 +305,7 @@
                                     }
                                 });
                             });
-                        </script>
-                        <script>
+
                             document.getElementById('aboutButton').addEventListener('click', function (event) {
                                 event.preventDefault(); // デフォルトのリンク動作を防ぐ
                                 const aboutMenu = document.getElementById('aboutMenu');
@@ -407,53 +418,68 @@
             </div>
             <script>
                 document.addEventListener('DOMContentLoaded', function () {
-                    let currentIndex = 0;
-                    const items = document.querySelectorAll('.p-carousel__inner');
-                    const itemCount = items.length;
-                    const intervalTime = 8000; // 8秒ごとに切り替え
+                    const items = document.querySelectorAll('.p-carousel__inner'); // スライド要素
+                    let currentIndex = 0; // 現在表示されているスライドのインデックス
+                    const itemCount = items.length; // スライドの数
+                    const intervalTime = 6000; // 6秒ごとに切り替え
 
-                    function showNextItem() {
-                        // 現在のスライドを非表示
+                    // スライドの切り替えを行う関数
+                    function switchSlide() {
+                        // 現在のスライドを非表示にする
                         items[currentIndex].classList.remove('active');
 
                         // 次のスライドに切り替え
                         currentIndex = (currentIndex + 1) % itemCount;
+
+                        // 次のスライドを表示
                         items[currentIndex].classList.add('active');
                     }
 
-                    // 初期スライドを表示
+                    // 初期表示：最初のスライドに active クラスを付与
                     items[currentIndex].classList.add('active');
 
-                    // 一定時間ごとにスライドを切り替え
-                    setInterval(showNextItem, intervalTime);
+                    // 一定時間ごとにスライドを切り替える
+                    setInterval(switchSlide, intervalTime);
                 });
             </script>
 
-            <!--PRODUCTSー
+            <!--PRODUCTSー-->
             <div class="l-main__products">
-                <div class="l-main__products__left">
-                    <div class="p-products__leftTop">
-                        <h2>PRODUCTS</h2>
+                <div class="l-main__products__wrap">
+                    <h2 class="l-main__products__title">
+                        <span class="p-products__title__inner">
+                            <span class="p-products__title">PRODUCTS</span>
+                        </span>
                         <a href="#" class="c-link__view-collection l-main__viewmoer">VIEW ALL&ensp;→</a>
-                    </div>
+                    </h2>
+                    <div class="l-main__products__inner">
+                        <div class="l-main__products__slide">
+                            <div class="p-products__slideText">
 
-                    <div class="p-products__buttonContainer">
-                        <a href="#" class="c-btn__rigth"></a>
-                        <a href="#" class="c-btn__left"></a>
+                            </div>
+                            <div class="p-products__slideImage">
+                                <ul>
+                                    <li><img src="assets/images/dish.jpg" alt="dish1"></li>
+                                    <li><img src="assets/images/dish2.jpg" alt="dish2"></li>
+                                    <li><img src="assets/images/terpot.jpg" alt="terpot"></li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
-                <div class="l-main__products__rigth">
-                    <div class="p-products__rigthImage"><a href="/">
-                            <img src="assets/images/dish.jpg" alt="products画像" />
-                        </a>
-                    </div>
-                    <div class="p-products__rigthImage"><a href="/">
-                            <img src="assets/images/dish2.jpg" alt="products画像" />
-                        </a>
-                    </div>
-                </div>
-            </div>-->
+            </div>
+            <script type="text/javascript">
+                $(document).ready(function () {
+                    $('.p-products__slideImage ul').slick({
+                        infinite: true,           // 無限スクロールを有効にする
+                        slidesToShow: 2,          // 一度に表示するスライドの数
+                        slidesToScroll: 1,        // スクロール時に移動するスライドの数
+                        arrows: true,             // 左右の矢印ボタンを表示
+                        autoplay: true,           // 自動再生を有効にする
+                        autoplaySpeed: 3000,      // 自動再生の速度（ミリ秒）
+                    });
+                });
+            </script>
 
             <!--CATEGORIESー-->
             <div class="l-main__categories">
@@ -858,6 +884,6 @@
     </div>
 </footer>
 </div><!-- l-wrap -->
-<script type="text/javascript" src="assets/javascripts/bundle4a4eb1f2d683de56c4c1.js"></script></body>
+<script type="text/javascript" src="assets/javascripts/bundle9536d56f3bbbb1f55217.js"></script></body>
 
 </html>

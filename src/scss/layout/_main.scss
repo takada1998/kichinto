@@ -36,27 +36,159 @@
 
     //product
     &__products {
-        height: 780px;
-        display: flex;
-        padding: 50px 0px 0px;
-        margin: 0px 100px;
-    }
+        width: 82%;
+        max-width: 1280px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 6%;
 
-    &__products__left {
-        height: 673px;
-    }
-
-    &__products__rigth {
-        display: flex;
-        padding: 0px 0px 0px 270px;
-        text-align: right;
-
-        img {
-            width: 470px;
-            height: 570px;
-            object-fit: cover;
-            padding-right: 15px
+        @media only screen and (max-width: 680px) {
+            margin-top: 20px;
+            width: 90%;
         }
+
+        &__wrap {
+            position: relative;
+
+            h2 {
+                margin-bottom: 52px;
+                width: auto;
+                border-bottom: 0px solid hsla(0, 0%, 100%, 1);
+                position: absolute;
+                left: 0;
+                top: 50%;
+                display: block;
+                transform-origin: center center;
+                transform: translateY(-50%);
+                z-index: 10;
+
+                @media only screen and (max-width: 680px) {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    margin-bottom: 12px;
+                    width: 100%;
+                    border-bottom: 1px solid hsla(0, 0%, 90%, 1);
+                    padding-bottom: 16px;
+                    position: relative;
+                    transform: translateY(0);
+                    top: 0;
+                    align-items: center;
+                    margin-bottom: 2rem;
+                }
+            }
+
+            span {
+                margin-bottom: 52px;
+                display: block;
+                font-size: 14px;
+                font-weight: 400;
+                letter-spacing: .1em;
+                line-height: 1;
+                position: relative;
+                color: #555555;
+
+                @media only screen and (max-width: 1000px) {
+                    margin-bottom: 25px;
+                }
+
+                @media only screen and (max-width: 680px) {
+                    margin-bottom: 0px;
+                    font-size: 12px;
+                    font-weight: 400;
+                    letter-spacing: .08em;
+                    line-height: 1;
+                }
+            }
+
+            a {
+                font-size: 11px;
+                font-weight: 400;
+                letter-spacing: .12em;
+                line-height: 1;
+                position: relative;
+                padding: .5rem 0;
+
+                color: #555555;
+
+                &::before {
+                    content: "";
+                    display: block;
+                    width: 100%;
+                    height: 1px;
+                    background-color: #989898;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+
+                    @media only screen and (max-width: 680px) {
+                        display: none;
+                    }
+
+                }
+            }
+        }
+
+        &__inner {
+            position: relative;
+        }
+
+        &__slide {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 2rem;
+
+            @media only screen and (max-width: 680px) {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: flex-start;
+                align-items: flex-start;
+                width: 100%;
+                flex-direction: column-reverse;
+                gap: 2rem;
+            }
+        }
+    }
+
+
+    /* 矢印ボタンのカスタマイズ */
+    .slick-prev {
+        width: 52px;
+        height: 52px;
+        border: 1px solid #989898;
+        transition: background-color .4s cubic-bezier(.25, .1, .25, 1) 0ms;
+    }
+
+    .slick-next {
+        width: 52px;
+        height: 52px;
+        border: 1px solid #989898;
+        transition: background-color .4s cubic-bezier(.25, .1, .25, 1) 0ms;
+    }
+
+    .slick-prev:before {
+        content: "";
+        width: 8px;
+        height: 8px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        border-top: 1px solid #989898;
+        border-right: 1px solid #989898;
+        transform: translate(-75%, -50%) rotate(45deg);
+        transition: border-color .2s cubic-bezier(.25, .1, .25, 1) 0ms;
+    }
+
+    .slick-next:before {
+        content: "";
+        width: 8px;
+        height: 8px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        border-top: 1px solid #989898;
+        border-right: 1px solid #989898;
+        transform: translate(-75%, -50%) rotate(45deg);
     }
 
 
@@ -92,6 +224,7 @@
         }
     }
 
+
     //MARKit
     &__MARKit__warp {
         display: flex;
@@ -106,6 +239,7 @@
             /* 親要素をrelativeにする */
             display: inline-block;
             /* 要素のサイズに合わせる */
+            display: block;
         }
     }
 

@@ -262,8 +262,7 @@
                                     }
                                 });
                             });
-                        </script>
-                        <script>
+
                             document.getElementById('aboutButton').addEventListener('click', function (event) {
                                 event.preventDefault(); // デフォルトのリンク動作を防ぐ
                                 const aboutMenu = document.getElementById('aboutMenu');
@@ -376,53 +375,68 @@
             </div>
             <script>
                 document.addEventListener('DOMContentLoaded', function () {
-                    let currentIndex = 0;
-                    const items = document.querySelectorAll('.p-carousel__inner');
-                    const itemCount = items.length;
-                    const intervalTime = 8000; // 8秒ごとに切り替え
+                    const items = document.querySelectorAll('.p-carousel__inner'); // スライド要素
+                    let currentIndex = 0; // 現在表示されているスライドのインデックス
+                    const itemCount = items.length; // スライドの数
+                    const intervalTime = 6000; // 6秒ごとに切り替え
 
-                    function showNextItem() {
-                        // 現在のスライドを非表示
+                    // スライドの切り替えを行う関数
+                    function switchSlide() {
+                        // 現在のスライドを非表示にする
                         items[currentIndex].classList.remove('active');
 
                         // 次のスライドに切り替え
                         currentIndex = (currentIndex + 1) % itemCount;
+
+                        // 次のスライドを表示
                         items[currentIndex].classList.add('active');
                     }
 
-                    // 初期スライドを表示
+                    // 初期表示：最初のスライドに active クラスを付与
                     items[currentIndex].classList.add('active');
 
-                    // 一定時間ごとにスライドを切り替え
-                    setInterval(showNextItem, intervalTime);
+                    // 一定時間ごとにスライドを切り替える
+                    setInterval(switchSlide, intervalTime);
                 });
             </script>
 
-            <!--PRODUCTSー
+            <!--PRODUCTSー-->
             <div class="l-main__products">
-                <div class="l-main__products__left">
-                    <div class="p-products__leftTop">
-                        <h2>PRODUCTS</h2>
+                <div class="l-main__products__wrap">
+                    <h2 class="l-main__products__title">
+                        <span class="p-products__title__inner">
+                            <span class="p-products__title">PRODUCTS</span>
+                        </span>
                         <a href="#" class="c-link__view-collection l-main__viewmoer">VIEW ALL&ensp;→</a>
-                    </div>
+                    </h2>
+                    <div class="l-main__products__inner">
+                        <div class="l-main__products__slide">
+                            <div class="p-products__slideText">
 
-                    <div class="p-products__buttonContainer">
-                        <a href="#" class="c-btn__rigth"></a>
-                        <a href="#" class="c-btn__left"></a>
+                            </div>
+                            <div class="p-products__slideImage">
+                                <ul>
+                                    <li><img src="assets/images/dish.jpg" alt="dish1"></li>
+                                    <li><img src="assets/images/dish2.jpg" alt="dish2"></li>
+                                    <li><img src="assets/images/terpot.jpg" alt="terpot"></li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
-                <div class="l-main__products__rigth">
-                    <div class="p-products__rigthImage"><a href="/">
-                            <img src="assets/images/dish.jpg" alt="products画像" />
-                        </a>
-                    </div>
-                    <div class="p-products__rigthImage"><a href="/">
-                            <img src="assets/images/dish2.jpg" alt="products画像" />
-                        </a>
-                    </div>
-                </div>
-            </div>-->
+            </div>
+            <script type="text/javascript">
+                $(document).ready(function () {
+                    $('.p-products__slideImage ul').slick({
+                        infinite: true,           // 無限スクロールを有効にする
+                        slidesToShow: 2,          // 一度に表示するスライドの数
+                        slidesToScroll: 1,        // スクロール時に移動するスライドの数
+                        arrows: true,             // 左右の矢印ボタンを表示
+                        autoplay: true,           // 自動再生を有効にする
+                        autoplaySpeed: 3000,      // 自動再生の速度（ミリ秒）
+                    });
+                });
+            </script>
 
             <!--CATEGORIESー-->
             <div class="l-main__categories">
