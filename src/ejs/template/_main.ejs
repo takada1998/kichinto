@@ -46,7 +46,7 @@
                                                             </div>
                                                         </div>
                                                     </li>
-                                                    <li><a href="#">ドリンクウェア</a>
+                                                    <li class="c-navchild__item"><a href="#"><span>ドリンクウェア</span></a>
                                                         <div class="c-nav__child__child">
                                                             <div class="c-nav__child__child__wrap">
                                                                 <ul>
@@ -95,7 +95,7 @@
                                                         </div>
                                                     </li>
 
-                                                    <li><a href="#">テーブルウェア</a>
+                                                    <li class="c-navchild__item"><a href="#"><span>テーブルウェア</span></a>
                                                         <div class="c-nav__child__child">
                                                             <div class="c-nav__child__child__wrap">
                                                                 <ul>
@@ -123,7 +123,7 @@
                                                             </div>
                                                         </div>
                                                     </li>
-                                                    <li><a href="#">キッチンウェア</a>
+                                                    <li class="c-navchild__item"><a href="#"><span>キッチンウェア</span></a>
                                                         <div class="c-nav__child__child">
                                                             <div class="c-nav__child__child__wrap">
                                                                 <ul>
@@ -156,7 +156,7 @@
                                                             </div>
                                                         </div>
                                                     </li>
-                                                    <li><a href="#">インテリア</a>
+                                                    <li class="c-navchild__item"><a href="#"><span>インテリア</span></a>
                                                         <div class="c-nav__child__child">
                                                             <div class="c-nav__child__child__wrap">
                                                                 <ul>
@@ -185,44 +185,34 @@
                                                         </div>
                                                     </li>
                                                     <li><a href="#">シリーズ一覧</a></li>
+                                                    <li class="c-navchild__item">
+                                                        <a href="#"><span>FEATURED DETEGORIES</span></a>
+                                                        <div class="p-featured__categories">
+                                                            <div class="p-featured__imeags">
+                                                                <ul class="p-featured__item">
+                                                                    <li>
+                                                                        <img src="assets/images/megamenu.jpeg"
+                                                                            alt="ギフト">
+                                                                    </li>
+                                                                    <li>
+                                                                        <img src="assets/images/megamenu.jpeg"
+                                                                            alt="ベビー・キッズ">
+                                                                    </li>
+                                                                    <li>
+                                                                        <img src="assets/images/megamenu.jpeg"
+                                                                            alt="パーソナライズ">
+                                                                    </li>
+                                                                    <li>
+                                                                        <img src="assets/images/megamenu.jpeg"
+                                                                            alt="シリーズ一覧">
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </li>
                                                 </ul>
-                                                <div class="p-featured__categories">
-                                                    <h3>FEATURED DETEGORIES</h3>
-                                                    <div class="p-featured__imeags">
-                                                        <div class="p-featured__item">
-                                                            <img src="assets/images/megamenu.jpeg" alt="ギフト">
-                                                        </div>
-                                                        <div class="p-featured__item">
-                                                            <img src="assets/images/megamenu.jpeg" alt="ベビー・キッズ">
-                                                        </div>
-                                                        <div class="p-featured__item">
-                                                            <img src="assets/images/megamenu.jpeg" alt="パーソナライズ">
-                                                        </div>
-                                                        <div class="p-featured__item">
-                                                            <img src="assets/images/megamenu.jpeg" alt="シリーズ一覧">
-                                                        </div>
-                                                    </div>
-                                                </div>
                                             </div>
                                         </div>
-
-                                        <script>
-                                            document.getElementById('shopButton').addEventListener('click', function (event) {
-                                                event.preventDefault(); // デフォルトのリンク動作を防ぐ
-                                                const megamenu = document.getElementById('megamenu');
-
-                                                // トグル表示
-                                                megamenu.classList.toggle('active');
-
-                                                // メニュー以外をクリックしたら閉じる処理
-                                                document.addEventListener('click', function (e) {
-                                                    if (!megamenu.contains(e.target) && e.target.id !== 'shopButton') {
-                                                        megamenu.classList.remove('active');
-                                                    }
-                                                });
-                                            });
-                                        </script>
-
                                     </li>
                                     <li class="c-navItem">
                                         <a href="#" class="c-navItem__link">JOURNAL</a>
@@ -248,30 +238,48 @@
                                             </div>
                                         </div>
                                     </li>
-
-                                    <script>
-                                        document.getElementById('aboutButton').addEventListener('click', function (event) {
-                                            event.preventDefault(); // デフォルトのリンク動作を防ぐ
-                                            const aboutMenu = document.getElementById('aboutMenu');
-
-                                            // トグル表示
-                                            aboutMenu.classList.toggle('active');
-
-                                            // メニュー以外をクリックしたら閉じる処理
-                                            document.addEventListener('click', function (e) {
-                                                if (!aboutMenu.contains(e.target) && e.target.id !== 'aboutButton') {
-                                                    aboutMenu.classList.remove('active');
-                                                }
-                                            });
-                                        });
-                                    </script>
-
                                     <li class="c-navItem">
                                         <a href="#" class="c-navItem__link">LOCATION</a>
                                     </li>
                                 </ul>
                             </div>
                         </div>
+
+                        <script>
+                            document.getElementById('shopButton').addEventListener('click', function (event) {
+                                event.preventDefault(); // デフォルトのリンク動作を防ぐ
+                                const megamenu = document.getElementById('megamenu');
+
+                                // トグル表示
+                                megamenu.classList.toggle('active');
+
+                                // メニュー以外をクリックしたら閉じる処理
+                                document.addEventListener('click', function (e) {
+                                    if (!megamenu.contains(e.target) && e.target.id !== 'shopButton') {
+                                        megamenu.classList.remove('active');
+                                    }
+                                });
+                            });
+                        </script>
+
+
+
+                        <script>
+                            document.getElementById('aboutButton').addEventListener('click', function (event) {
+                                event.preventDefault(); // デフォルトのリンク動作を防ぐ
+                                const aboutMenu = document.getElementById('aboutMenu');
+
+                                // トグル表示
+                                aboutMenu.classList.toggle('active');
+
+                                // メニュー以外をクリックしたら閉じる処理
+                                document.addEventListener('click', function (e) {
+                                    if (!aboutMenu.contains(e.target) && e.target.id !== 'aboutButton') {
+                                        aboutMenu.classList.remove('active');
+                                    }
+                                });
+                            });
+                        </script>
                     </div>
                     <!-- ユーザーアイコン、ショッピングバッグ、検索、言語 -->
                     <div class="l-header__right">
