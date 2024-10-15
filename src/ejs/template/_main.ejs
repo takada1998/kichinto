@@ -14,7 +14,7 @@
                                 <ul class="p-nav__list">
                                     <li class="c-navItem">
                                         <a href="#" class="c-navItem__link__arrow" id="shopButton">SHOP</a>
-                                        <!-- SHOP megamenu-->
+                                        <!-- SHOP megamenu
                                         <div class="p-megamenu__shop" id="megamenu">
                                             <div class="p-megamenu__column">
                                                 <ul class="c-navchild">
@@ -213,7 +213,7 @@
                                                     </li>
                                                 </ul>
                                             </div>
-                                        </div>
+                                        </div>-->
                                     </li>
                                     <li class="c-navItem">
                                         <a href="#" class="c-navItem__link">JOURNAL</a>
@@ -278,29 +278,7 @@
                                 });
                             });
 
-                            document.addEventListener('DOMContentLoaded', function () {
-                                const menuItems = document.querySelectorAll('.c-navchild__item');
 
-                                menuItems.forEach(item => {
-                                    const link = item.querySelector('a');
-                                    const submenu = item.querySelector('.c-navchild__child');
-
-                                    if (link && submenu) {
-                                        let timeout;
-
-                                        item.addEventListener('mouseenter', function () {
-                                            clearTimeout(timeout);
-                                            submenu.style.display = 'block';
-                                        });
-
-                                        item.addEventListener('mouseleave', function () {
-                                            timeout = setTimeout(() => {
-                                                submenu.style.display = 'none';
-                                            }, 200); // 200ミリ秒の遅延を設定
-                                        });
-                                    }
-                                });
-                            });
 
                         </script>
                     </div>

@@ -118,5 +118,7 @@
 
 .p-carousel__inner.active {
     opacity: 1;
+    z-index: 2;
+    /* 表示するスライドを前面に */
     position: relative;
 }
