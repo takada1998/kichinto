@@ -6,7 +6,7 @@
                 <div class="l-header__inner">
                     <div class="l-header__left">
                         <div class="l-header__logo">
-                            <div class="l-header__text">KINTO</div>
+                            <div class="l-header__text">KICHINTO</div>
                         </div>
                         <!-- グローバルメニュー left-->
                         <div class="l-header__nav">
@@ -222,7 +222,7 @@
                                         <a href="#" class="c-navItem__link">STYLING</a>
                                     </li>
                                     <li class="c-navItem">
-                                        <a href="#" class="c-navItem__link">NEWE</a>
+                                        <a href="#" class="c-navItem__link">NEWS</a>
                                     </li>
                                     <li class="c-navItem">
                                         <a href="#" class="c-navItem__link__arrow" id="aboutButton">ABOUT</a>
@@ -232,7 +232,7 @@
                                                 <ul>
                                                     <li><a href="#">ブランドについて</a></li>
                                                     <li><a href="#">会社への思い</a></li>
-                                                    <li><a href="#">KINTOで働く</a></li>
+                                                    <li><a href="#">KICHINTOで働く</a></li>
                                                     <li><a href="#">会社概要</a></li>
                                                     <li><a href="#">法人のお客様へ</a></li>
                                                 </ul>
@@ -277,6 +277,31 @@
                                     }
                                 });
                             });
+
+                            document.addEventListener('DOMContentLoaded', function () {
+                                const menuItems = document.querySelectorAll('.c-navchild__item');
+
+                                menuItems.forEach(item => {
+                                    const link = item.querySelector('a');
+                                    const submenu = item.querySelector('.c-navchild__child');
+
+                                    if (link && submenu) {
+                                        let timeout;
+
+                                        item.addEventListener('mouseenter', function () {
+                                            clearTimeout(timeout);
+                                            submenu.style.display = 'block';
+                                        });
+
+                                        item.addEventListener('mouseleave', function () {
+                                            timeout = setTimeout(() => {
+                                                submenu.style.display = 'none';
+                                            }, 200); // 200ミリ秒の遅延を設定
+                                        });
+                                    }
+                                });
+                            });
+
                         </script>
                     </div>
                     <!-- ユーザーアイコン、ショッピングバッグ、検索、言語 -->
@@ -511,7 +536,7 @@
                                     </li>
                                 </ul>
                                 <ul class="c-textBox__topbottom">
-                                    <li>BY KINTO</li>
+                                    <li>BY KICHINTO</li>
                                 </ul>
                             </div>
                             <div class="c-textBox__botoomwarp">
@@ -635,7 +660,7 @@
                                 </a>
                                 <p>CITY TOUR</p>
                                 <p>PARTNER</p>
-                                <p>KINTO City Tour - アムステスダム -</p>
+                                <p>KICHINTO City Tour - アムステスダム -</p>
                             </li>
                         </ul>
                     </div>
@@ -662,7 +687,7 @@
                                 </h2>
                                 <div>
                                     <span class="l-main__movie__texttop__link">
-                                        ABOUT KINTO
+                                        ABOUT KICHINTO
                                     </span>
                                 </div>
                             </div>

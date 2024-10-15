@@ -14,6 +14,11 @@
         visibility: visible;
         opacity: 1;
         pointer-events: auto;
+        display: none;
+    }
+
+    &__item {
+        position: relative;
     }
 
     &__item__all {
@@ -76,4 +81,8 @@
             background-position: center;
         }
     }
+}
+
+.c-navchild__item:hover .c-navchild__child {
+    display: block;
 }
