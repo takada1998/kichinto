@@ -23,6 +23,12 @@
 
 .p-products__slideImage ul {
     overflow: visible;
+
+    @media screen and (max-width: 680px) {
+        overflow: visible;
+        /* チラ見せのための右側余白 */
+    }
+
     /* 右側に「チラ見せ」部分を表示するために必要 */
 }
 
@@ -40,5 +46,6 @@
 
 .slick-list {
     padding-right: 120px;
-    /* 右側にチラ見せの余白を作る */
+
+
 }

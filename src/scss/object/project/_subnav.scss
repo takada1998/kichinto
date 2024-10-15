@@ -9,8 +9,9 @@
     }
 
     li {
-        width: 40px;
+        width: auto;
         height: 100%;
+        margin: 0 7px 0 7px;
     }
 
     img {
@@ -20,15 +21,16 @@
 
     a {
         display: flex;
-        width: 4rem;
+        width: auto;
         //height: 60px;
         overflow: hidden;
         position: relative;
+        align-items: center;
 
     }
 
     h2 {
-        font-family: 12px;
+        font-size: 12px;
         font-weight: 400;
         font-style: normal;
         color: #555555;

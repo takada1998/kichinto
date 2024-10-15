@@ -36,7 +36,7 @@
     <title>
         TOP
     </title>
-<link href="assets/stylesheets/bundle9536d56f3bbbb1f55217.css" rel="stylesheet"></head>
+<link href="assets/stylesheets/bundlea0a0399c1b0b61eb6dbf.css" rel="stylesheet"></head>
 
 <body>
     <div class="l-wrap">
@@ -454,9 +454,6 @@
                     </h2>
                     <div class="l-main__products__inner">
                         <div class="l-main__products__slide">
-                            <div class="p-products__slideText">
-
-                            </div>
                             <div class="p-products__slideImage">
                                 <ul>
                                     <li><img src="assets/images/dish.jpg" alt="dish1"></li>
@@ -474,9 +471,18 @@
                         infinite: true,           // 無限スクロールを有効にする
                         slidesToShow: 2,          // 一度に表示するスライドの数
                         slidesToScroll: 1,        // スクロール時に移動するスライドの数
-                        arrows: true,             // 左右の矢印ボタンを表示
+                        //arrows: true,             // 左右の矢印ボタンを表示
                         autoplay: true,           // 自動再生を有効にする
                         autoplaySpeed: 3000,      // 自動再生の速度（ミリ秒）
+                        responsive: [
+                            {
+                                breakpoint: 680,   // 横幅680px以下の場合の設定
+                                settings: {
+                                    slidesToShow: 1,  // 1枚表示
+                                    centerPadding: '50px', // チラ見せ部分の幅を指定
+                                }
+                            }
+                        ]
                     });
                 });
             </script>
@@ -884,6 +890,6 @@
     </div>
 </footer>
 </div><!-- l-wrap -->
-<script type="text/javascript" src="assets/javascripts/bundle9536d56f3bbbb1f55217.js"></script></body>
+<script type="text/javascript" src="assets/javascripts/bundlea0a0399c1b0b61eb6dbf.js"></script></body>
 
 </html>
