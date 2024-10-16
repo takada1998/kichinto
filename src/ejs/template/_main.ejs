@@ -14,7 +14,7 @@
                                 <ul class="p-nav__list">
                                     <li class="c-navItem">
                                         <a href="#" class="c-navItem__link__arrow" id="shopButton">SHOP</a>
-                                        <!-- SHOP megamenu
+                                        <!-- SHOP megamenu-->
                                         <div class="p-megamenu__shop" id="megamenu">
                                             <div class="p-megamenu__column">
                                                 <ul class="c-navchild">
@@ -213,7 +213,7 @@
                                                     </li>
                                                 </ul>
                                             </div>
-                                        </div>-->
+                                        </div>
                                     </li>
                                     <li class="c-navItem">
                                         <a href="#" class="c-navItem__link">JOURNAL</a>
@@ -376,7 +376,7 @@
                     </div>
                 </div>
             </div>
-            <script>
+            <!--ACTIVE BOTTLE JS<script>
                 document.addEventListener('DOMContentLoaded', function () {
                     const items = document.querySelectorAll('.p-carousel__inner'); // スライド要素
                     let currentIndex = 0; // 現在表示されているスライドのインデックス
@@ -401,7 +401,7 @@
                     // 一定時間ごとにスライドを切り替える
                     setInterval(switchSlide, intervalTime);
                 });
-            </script>
+            </script>-->
 
             <!--PRODUCTSー-->
             <div class="l-main__products">
@@ -431,12 +431,12 @@
                         infinite: true,           // 無限スクロールを有効にする
                         slidesToShow: 2,          // 一度に表示するスライドの数
                         slidesToScroll: 1,        // スクロール時に移動するスライドの数
-                        //arrows: true,             // 左右の矢印ボタンを表示
+                        arrows: false,             // 左右の矢印ボタンを非表示
                         autoplay: true,           // 自動再生を有効にする
                         autoplaySpeed: 3000,      // 自動再生の速度（ミリ秒）
                         responsive: [
                             {
-                                breakpoint: 680,   // 横幅680px以下の場合の設定
+                                breakpoint: 1000,   // 横幅1000px以下の場合の設定
                                 settings: {
                                     slidesToShow: 1,  // 1枚表示
                                     centerPadding: '50px', // チラ見せ部分の幅を指定
