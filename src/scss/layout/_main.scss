@@ -59,6 +59,10 @@
 
         &__wrap {
             position: relative;
+            opacity: 0;
+            transform: translateY(50px);
+            /* 少し下に配置しておく */
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 
             h2 {
                 margin-bottom: 52px;
@@ -71,6 +75,7 @@
                 transform-origin: center center;
                 transform: translateY(-50%);
                 z-index: 10;
+
 
                 @media only screen and (max-width: 680px) {
                     display: flex;
@@ -130,11 +135,26 @@
                     position: absolute;
                     bottom: 0;
                     left: 0;
+                    transition: width 0.3s ease, left 0s ease 0.3s;
 
                     @media only screen and (max-width: 680px) {
                         display: none;
                     }
 
+                }
+
+                &:hover::before {
+                    width: 0;
+                    left: auto;
+                    right: 0;
+                    transition: width 0.3s ease, right 0s ease 0s;
+                }
+
+                &:not(:hover)::before {
+                    width: 100%;
+                    left: 0;
+                    right: auto;
+                    transition: width 0.3s ease, left 0s ease 0s;
                 }
             }
         }
@@ -230,7 +250,6 @@
             top: 50%;
             left: 0;
             width: 100%;
-            transform: translateY(-50%);
         }
     }
 
@@ -354,6 +373,21 @@
                 bottom: 0;
                 left: 0;
                 width: 100%;
+                transition: width 0.3s ease, left 0s ease 0.3s;
+            }
+
+            &:hover::before {
+                width: 0;
+                left: auto;
+                right: 0;
+                transition: width 0.3s ease, right 0s ease 0s;
+            }
+
+            &:not(:hover)::before {
+                width: 100%;
+                left: 0;
+                right: auto;
+                transition: width 0.3s ease, left 0s ease 0s;
             }
         }
     }
@@ -470,6 +504,21 @@
                 position: absolute;
                 bottom: 0;
                 left: 0;
+                transition: width 0.3s ease, left 0s ease 0.3s;
+            }
+
+            &:hover::before {
+                width: 0;
+                left: auto;
+                right: 0;
+                transition: width 0.3s ease, right 0s ease 0s;
+            }
+
+            &:not(:hover)::before {
+                width: 100%;
+                left: 0;
+                right: auto;
+                transition: width 0.3s ease, left 0s ease 0s;
             }
         }
 
@@ -483,6 +532,8 @@
         padding-top: 6%;
         padding-bottom: 6%;
         position: relative;
+        opacity: 0;
+        transition: opacity 0.8s ease-out;
 
         @media only screen and (max-width: 1000px) {
             padding-top: 12%;
@@ -518,6 +569,10 @@
             align-items: center;
             width: 100%;
         }
+    }
+
+    .l-main__movieinner.fade-in {
+        opacity: 1;
     }
 
     //news
@@ -639,7 +694,11 @@
         }
     }
 
+}
 
+.l-main__products__wrap.fade-in {
+    opacity: 1;
+    /* 元の位置に戻す */
 }
 
 .l-main__MARKit__productImage.visible {
@@ -649,4 +708,12 @@
 
 .l-main__MARKit__left img.active {
     opacity: 1;
+}
+
+.l-main__more-collection {
+    transition: color 0.3s ease, opacity 0.3s ease;
+}
+
+.l-main__more-collection:hover {
+    opacity: 0.5;
 }

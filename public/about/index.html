@@ -35,7 +35,7 @@
     <title>
         ABOUT
     </title>
-<link href="../assets/stylesheets/bundlefb88f3c9dc8cad3c0a3f.css" rel="stylesheet"></head>
+<link href="../assets/stylesheets/bundleac29ac37b8cd231e834a.css" rel="stylesheet"></head>
 
 <body>
     <div class="l-wrap">
@@ -67,6 +67,29 @@
             </div>
         </div>
     </div>
+    <script>document.addEventListener('DOMContentLoaded', function () {
+            const footerWrap = document.querySelector('.l-footer__head__wrap'); // フッターセクションの要素を取得
+
+            // Intersection Observerの設定
+            const observerOptions = {
+                root: null, // ビューポートを監視
+                rootMargin: '0px',
+                threshold: 0.1 // 要素が10%表示されたら
+            };
+
+            const observer = new IntersectionObserver(function (entries, observer) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // フッターセクションが画面内に表示されたら
+                        entry.target.classList.add('fade-in'); // フェードインのクラスを追加
+                        observer.unobserve(entry.target); // 一度表示されたら監視を停止
+                    }
+                });
+            }, observerOptions);
+
+            // フッターセクションの監視を開始
+            observer.observe(footerWrap);
+        });</script>
 
     <div class="l-footer__body">
         <div class="l-footer__body__wrap">
@@ -190,6 +213,6 @@
     </div>
 </footer>
 </div><!-- l-wrap -->
-<script type="text/javascript" src="../assets/javascripts/bundlefb88f3c9dc8cad3c0a3f.js"></script></body>
+<script type="text/javascript" src="../assets/javascripts/bundleac29ac37b8cd231e834a.js"></script></body>
 
 </html>

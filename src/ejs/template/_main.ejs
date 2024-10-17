@@ -445,6 +445,30 @@
                         ]
                     });
                 });
+
+                document.addEventListener('DOMContentLoaded', function () {
+                    const productsWrap = document.querySelector('.l-main__products__wrap');
+
+                    // Intersection Observerの設定
+                    const observerOptions = {
+                        root: null, // ビューポートを監視
+                        rootMargin: '0px',
+                        threshold: 0.1 // 要素が10%表示されたら
+                    };
+
+                    const observer = new IntersectionObserver(function (entries, observer) {
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting) {
+                                // 要素が画面内に表示された場合
+                                entry.target.classList.add('fade-in'); // フェードインのクラスを追加
+                                observer.unobserve(entry.target); // 一度表示されたら監視を停止
+                            }
+                        });
+                    }, observerOptions);
+
+                    // 監視開始
+                    observer.observe(productsWrap);
+                });
             </script>
 
             <!--CATEGORIESー-->
@@ -491,9 +515,37 @@
                             </a>
                         </li>
                     </ul>
-
                 </div>
             </div>
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    const images = document.querySelectorAll('.c-images__categoriesImage'); // 画像リストの各項目を取得
+
+                    // Intersection Observerの設定
+                    const observerOptions = {
+                        root: null, // ビューポートを監視
+                        rootMargin: '0px',
+                        threshold: 0.1 // 要素が10%表示されたら
+                    };
+
+                    const observer = new IntersectionObserver(function (entries, observer) {
+                        entries.forEach((entry, index) => {
+                            if (entry.isIntersecting) {
+                                // 各画像が順番に表示されるようにタイミングを遅らせる
+                                setTimeout(() => {
+                                    entry.target.classList.add('fade-in'); // フェードインのクラスを追加
+                                }, index * 300); // 順番に300msずつ遅延
+                                observer.unobserve(entry.target); // 一度表示されたら監視を停止
+                            }
+                        });
+                    }, observerOptions);
+
+                    // すべての画像に対して監視を開始
+                    images.forEach(image => {
+                        observer.observe(image);
+                    });
+                });
+            </script>
             <!--MARKit-2-->
             <div class="l-main__MARKit">
                 <div class="l-main__MARKit__warp">
@@ -644,6 +696,36 @@
                     </div>
                 </div>
             </div>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    const journalItems = document.querySelectorAll('.c-collectionItem__bottomImage'); // 画像リストの各項目を取得
+
+                    // Intersection Observerの設定
+                    const observerOptions = {
+                        root: null, // ビューポートを監視
+                        rootMargin: '0px',
+                        threshold: 0.1 // 要素が10%表示されたら
+                    };
+
+                    const observer = new IntersectionObserver(function (entries, observer) {
+                        entries.forEach((entry, index) => {
+                            if (entry.isIntersecting) {
+                                // 各画像が順番に表示されるようにタイミングを遅らせる
+                                setTimeout(() => {
+                                    entry.target.classList.add('fade-in'); // フェードインのクラスを追加
+                                }, index * 300); // 順番に300msずつ遅延
+                                observer.unobserve(entry.target); // 一度表示されたら監視を停止
+                            }
+                        });
+                    }, observerOptions);
+
+                    // すべての画像に対して監視を開始
+                    journalItems.forEach(item => {
+                        observer.observe(item);
+                    });
+                });
+            </script>
             <!--movie-->
             <div class="l-main__movie">
                 <div class="l-main__movieinner">
@@ -673,6 +755,29 @@
                     </a>
                 </div>
             </div>
+            <script>document.addEventListener('DOMContentLoaded', function () {
+                    const movieSection = document.querySelector('.l-main__movieinner'); // 動画セクションの要素を取得
+
+                    // Intersection Observerの設定
+                    const observerOptions = {
+                        root: null, // ビューポートを監視
+                        rootMargin: '0px',
+                        threshold: 0.1 // 要素が10%表示されたら
+                    };
+
+                    const observer = new IntersectionObserver(function (entries, observer) {
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting) {
+                                // 動画セクションが画面内に表示されたら
+                                entry.target.classList.add('fade-in'); // フェードインのクラスを追加
+                                observer.unobserve(entry.target); // 一度表示されたら監視を停止
+                            }
+                        });
+                    }, observerOptions);
+
+                    // 動画セクションの監視を開始
+                    observer.observe(movieSection);
+                });</script>
             <!--news-->
             <div class="l-main__news">
                 <div class="l-main__newsWprp">

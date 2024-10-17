@@ -18,6 +18,8 @@
             width: 90%;
             margin-left: auto;
             margin-right: auto;
+            opacity: 0;
+            transition: opacity 0.8s ease-out;
         }
     }
 
@@ -236,6 +238,7 @@
             width: 2.3rem;
             height: 2.3rem;
             display: block;
+            transition: filter 0.3s ease;
 
             @media only screen and (max-width: 680px) {
                 width: 2.2rem;
@@ -302,6 +305,7 @@
             color: #555555;
             padding: 1rem;
             display: block;
+            transition: color 0.3s ease, opacity 0.3s ease;
         }
     }
 
@@ -314,6 +318,10 @@
 
 
     }
+}
+
+.l-footer__head__wrap.fade-in {
+    opacity: 1;
 }
 
 .l-footer__modalbtn span::after {
@@ -342,4 +350,12 @@
 
 .l-footer__subnav__li:last-child .l-footer__subnav__link span::after {
     content: none;
+}
+
+.l-footer__sns img:hover {
+    filter: brightness(2);
+}
+
+.l-footer__subnav a:hover {
+    opacity: 0.7;
 }

@@ -1,0 +1,20 @@
+.c-images {
+    &__categoriesImage {
+        opacity: 0;
+        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+
+}
+
+.c-images__categoriesImage img {
+    transition: filter 0.3s ease;
+}
+
+.c-images__categoriesImage img:hover {
+    filter: brightness(0.7);
+}
+
+.c-images__categoriesImage.fade-in {
+    opacity: 1;
+    /* 元の位置に戻す */
+}

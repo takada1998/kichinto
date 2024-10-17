@@ -21,7 +21,26 @@
     }
 }
 
+.c-collectionItem__bottomImage {
+    opacity: 0;
+    transition: opacity 0.8s ease-out;
+}
+
+.c-collectionItem__bottomImage.fade-in {
+    opacity: 1;
+}
+
 .c-collectionItem__bottomImage p:first-of-type {
     color: #989898;
     margin-top: 1rem;
+}
+
+.c-collectionItem__bottomImage img {
+    transition: filter 0.3s ease;
+    /* スムーズなアニメーション */
+}
+
+.c-collectionItem__bottomImage img:hover {
+    filter: brightness(0.7);
+    /* 明度を70%に設定して少し暗くする */
 }
