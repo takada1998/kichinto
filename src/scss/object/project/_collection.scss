@@ -3,6 +3,8 @@
     /*  左右均等に配置※すべてのマージン幅が同じ  */
     justify-content: space-evenly;
 
+
+
     li {
         @media only screen and (max-width: 680px) {
             margin-bottom: 4rem;
