@@ -11,6 +11,16 @@
         border-bottom: 1px solid hsla(0, 0%, 90%, 1);
         padding: 3rem 0;
         display: none;
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: calc(36rem + 10vw);
+            height: 100%;
+            top: 0;
+            right: 0;
+            background-color: hsla(180, 8%, 97%, 1);
+        }
     }
 
     &__column {
@@ -106,7 +116,6 @@
                 position: absolute;
                 top: 50%;
                 right: 0;
-                -webkit-transform: translate(0, -50%);
                 transform: translateY(-50%);
             }
         }

@@ -8,6 +8,7 @@
         padding: 0 1em;
         position: relative;
         color: #555555;
+        transition: color 0.3s ease, opacity 0.3s ease;
     }
 
     &__link__arrow::after {
@@ -34,4 +35,8 @@
         }
 
     }
+}
+
+.c-navItem a:hover {
+    opacity: 0.6;
 }
