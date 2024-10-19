@@ -1,0 +1,32 @@
+.c-hbgfeatured__link {
+    cursor: default;
+    margin-bottom: 10px;
+    margin-left: 5vw;
+    pointer-events: none;
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: .06em;
+    line-height: 1;
+    position: relative;
+    padding: 0 0 0 1.2em;
+
+    &::before {
+        content: "";
+        width: .5em;
+        height: 100%;
+        position: absolute;
+        background-color: #989898;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+    }
+}
+
+.c-hbgfeatured__child__navlink {
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: .125em;
+    line-height: 1.9;
+    padding: .5em 5vw;
+    display: block;
+}
