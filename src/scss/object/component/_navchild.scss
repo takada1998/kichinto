@@ -66,7 +66,15 @@
         width: 50%;
         //padding-left: .5rem;
         //padding-right: .5rem;
-        margin-bottom: 0.5rem;
+        //margin-bottom: 0.5rem;
+    }
+
+    li:nth-child(3) {
+        margin-top: 1rem;
+    }
+
+    li:nth-child(4) {
+        margin-top: 1rem;
     }
 
     img {
@@ -80,4 +88,13 @@
 
 .c-navchild__item a:hover+.c-navchild__child {
     display: block;
+}
+
+.c-navchild .c-navchild__item__side a {
+    width: 100%;
+}
+
+.c-navchild .c-navchild__item__side li {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
 }
